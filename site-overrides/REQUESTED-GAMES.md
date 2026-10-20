@@ -1,5 +1,27 @@
 # Requested Games Review - October 20, 2026
 
+## Follow-Up: Recognizable Publisher Games
+
+Added Backrooms, Basketball Stars, Basketball Legends 2020, BasketBros.io,
+Volley Random and Boxing Random from TwoPlayerGames' public Embed controls.
+Game assets remain hosted by the publisher. Provenance and observations are in
+`catalog-sources/requested-publishers.json`.
+
+The actual browser fixture exposed an address bug: calling `document.open()`
+from the opener could replace the popup's document URL with the library URL.
+The active launchers now write from a script created inside the blank document.
+All six new popup checks returned `about:blank` after this correction. This is
+not navigation or a browser-security bypass; it keeps the blank document's URL.
+
+Backrooms reached its game menu in the saved wrapper and its fullscreen stage
+matched viewport bounds. Nested game-canvas input could not be reliably driven
+by the test browser, so full gameplay and fullscreen are still not marked passed.
+All six remain internally untested rather than falsely advertised as supported.
+
+The official FNF itch.io Embed dialog was inspected directly. It supplies a
+167px-high promotional widget linking to itch.io, not a playable game embed.
+That widget is not offered as a substitute for the requested game.
+
 The URL and branding are unchanged. Hosting is not moved or disguised to evade
 school filtering. About:blank is a launch container, not an access-control bypass.
 No new external Play actions are added. Publisher/source citations remain credits.
@@ -43,7 +65,7 @@ owning a retail copy does not by itself grant public website redistribution righ
 | PS3 emulator | [RPCS3](https://rpcs3.net/) is a native emulator, not a drop-in HTML application. No credible browser-ready PS3 emulator was verified. No fake emulator card or download is added. |
 | Solar Smash | [Paradyme](https://paradyme.games/) is the original developer. No third-party embed/hosting permission verified. An authorized playable on another service would not automatically permit extracting it. |
 | Flappy Dunk | No original Voodoo-authorized browser package or publisher embed verified. No similarly named remake substituted. |
-| Backrooms | A setting shared by many unrelated games, not one specific licensed title. Need the exact creator/title or an authorized browser build to review. |
+| Backrooms | Added the specific Backrooms edition supplied through TwoPlayerGames' public Embed control. Its menu rendered; full gameplay testing remains incomplete. |
 | Soundboard | No specific board was named or licensed audio collection verified. Need a creator-published board with embed permission or a licensed audio pack; no copyrighted clip collection copied. |
 | The World's Hardest Game | No rights-holder-authorized distribution package verified in this pass. Third-party embed offers are not taken as proof they hold the original game's rights. Need an original-author/publisher-approved SWF/HTML package. |
 
