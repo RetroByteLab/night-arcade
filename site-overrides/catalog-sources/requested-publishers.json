@@ -1,0 +1,111 @@
+[
+  {
+    "catalogId": "tpg-backrooms",
+    "title": "Backrooms",
+    "sourceUrl": "https://www.twoplayergames.org/game/backrooms",
+    "embedUrl": "https://www.twoplayergames.org/embed/backrooms",
+    "pageSha256": "3f1ef71eac6ac55f31d2587f98d2adb1560bed651f561ae4a6d7472e82f3a550",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-backrooms/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "incomplete",
+      "fullscreen": "stage entered fullscreen at viewport bounds; full gameplay remains incomplete",
+      "menu": "rendered in saved wrapper"
+    }
+  },
+  {
+    "catalogId": "classic-basketball-stars",
+    "title": "Basketball Stars",
+    "sourceUrl": "https://www.twoplayergames.org/game/basketball-stars",
+    "embedUrl": "https://www.twoplayergames.org/embed/basketball-stars",
+    "pageSha256": "8e173a614fadb92f91385c653805a80b735faab6227df3125144383d848b7328",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-basketball-stars/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "incomplete",
+      "fullscreen": "incomplete"
+    }
+  },
+  {
+    "catalogId": "classic-basketball-legends-2020",
+    "title": "Basketball Legends 2020",
+    "sourceUrl": "https://www.twoplayergames.org/game/basketball-legends-2020",
+    "embedUrl": "https://www.twoplayergames.org/embed/basketball-legends-2020",
+    "pageSha256": "e397ece71e1bf3b36c9e14ba5ffc271d78b6b80df84b99234f2e7f185dd865e4",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-basketball-legends-2020/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "incomplete",
+      "fullscreen": "incomplete"
+    }
+  },
+  {
+    "catalogId": "tpg-basketbros-io",
+    "title": "BasketBros.io",
+    "sourceUrl": "https://www.twoplayergames.org/game/basketbros-io",
+    "embedUrl": "https://www.twoplayergames.org/embed/basketbros-io",
+    "pageSha256": "b5eaf0f6274236a96be877cc6b3cd5920ac5122c1b36672cc21d27c23aac50de",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-basketbros-io/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "incomplete",
+      "fullscreen": "incomplete"
+    }
+  },
+  {
+    "catalogId": "tpg-volley-random",
+    "title": "Volley Random",
+    "sourceUrl": "https://www.twoplayergames.org/game/volley-random",
+    "embedUrl": "https://www.twoplayergames.org/embed/volley-random",
+    "pageSha256": "ddee090a32244cbb758dd93faa8820b250a957524f56f39453fababa951f8c78",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-volley-random/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "incomplete",
+      "fullscreen": "incomplete"
+    }
+  },
+  {
+    "catalogId": "tpg-boxing-random",
+    "title": "Boxing Random",
+    "sourceUrl": "https://www.twoplayergames.org/game/boxing-random",
+    "embedUrl": "https://www.twoplayergames.org/embed/boxing-random",
+    "pageSha256": "41c4096b1ac85037631bd42a15fe609f7c6005707fd089a24345c6f65d8dae8d",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-boxing-random/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "incomplete",
+      "fullscreen": "incomplete"
+    }
+  }
+]
