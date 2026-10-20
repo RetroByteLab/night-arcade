@@ -7,7 +7,7 @@
   <meta name="description" content="A handpicked library of browser games, with an about:blank launcher and clear compatibility labels.">
   <title>Night Arcade — Play something good</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261019-2">
+  <link rel="stylesheet" href="styles.css?v=20261019-3">
 </head>
 <body>
   <div class="app-shell">
@@ -15,9 +15,8 @@
       <a class="brand" href="#home" aria-label="Night Arcade home"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span>night<span class="brand-light">arcade</span></span></a>
       <div class="side-caption">DISCOVER</div>
       <nav class="main-nav" aria-label="Main navigation">
-        <button class="nav-item active" data-view="blank" title="Local HTML games and game embeds; check each compatibility label"><span class="nav-icon">↗</span> About:blank HTML <span class="nav-count" id="blank-count"></span></button>
+        <button class="nav-item active" data-view="blank" title="About:blank games and clearly labeled official-site alternatives"><span class="nav-icon">↗</span> Game library <span class="nav-count" id="blank-count"></span></button>
         <button class="nav-item" data-view="all"><span class="nav-icon">◈</span> Source catalog <span class="nav-count" id="all-count"></span></button>
-        <button class="nav-item" data-view="featured"><span class="nav-icon">✦</span> Featured</button>
         <button class="nav-item" data-view="favorites"><span class="nav-icon">♡</span> Favorites</button>
         <button class="nav-item" data-view="recent"><span class="nav-icon">◷</span> Recently played</button>
       </nav>
@@ -48,13 +47,8 @@
         <div class="hero-index">01 <span>—</span> 19</div>
       </section>
 
-      <section class="featured-section" id="featured-section">
-        <div class="section-heading"><div><p class="section-kicker">THE SPOTLIGHT</p><h2>Featured game</h2></div><span class="source-note">HANDPICKED FOR YOU</span></div>
-        <article class="feature-card" id="feature-card"></article>
-      </section>
-
       <section class="library-section" id="library">
-        <div class="section-heading library-heading"><div><p class="section-kicker">PICK YOUR MOOD</p><h2 id="library-title">The library <span id="result-count"></span></h2></div><div class="heading-actions"><button class="clear-history" id="clear-history" hidden>Clear history</button><label class="sort-control">SORT BY <select id="sort-select"><option value="featured">Featured</option><option value="az">A–Z</option><option value="newest">Recently added</option><option value="played">Recently played</option></select></label></div></div>
+        <div class="section-heading library-heading"><div><p class="section-kicker">PICK YOUR MOOD</p><h2 id="library-title">The library <span id="result-count"></span></h2></div><div class="heading-actions"><button class="clear-history" id="clear-history" hidden>Clear history</button><label class="sort-control">SORT BY <select id="sort-select"><option value="featured">Recommended</option><option value="az">A–Z</option><option value="newest">Recently added</option><option value="played">Recently played</option></select></label></div></div>
         <div class="toolbar">
           <label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Search games, genres, keywords…" autocomplete="off"><kbd>⌘ K</kbd><button id="clear-search" aria-label="Clear search" hidden>×</button></label>
           <div class="filter-row" id="filter-row" aria-label="Filter by category"></div>
@@ -72,6 +66,6 @@
     <div class="inline-game-frame"><div class="inline-loading" id="inline-loading">Loading game…</div><iframe id="inline-frame" title="Game" allow="fullscreen; autoplay; gamepad; accelerometer; gyroscope" allowfullscreen></iframe></div>
   </section>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="app.js?v=20261019-2" defer></script>
+  <script src="app.js?v=20261019-3" defer></script>
 </body>
 </html>
