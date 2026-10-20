@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090c14">
+  <meta name="description" content="A handpicked library of browser games, with an about:blank launcher and clear compatibility labels.">
+  <title>Night Arcade — Play something good</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20261019-2">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="Night Arcade home"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span>night<span class="brand-light">arcade</span></span></a>
+      <div class="side-caption">DISCOVER</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="blank" title="Local HTML games and game embeds; check each compatibility label"><span class="nav-icon">↗</span> About:blank HTML <span class="nav-count" id="blank-count"></span></button>
+        <button class="nav-item" data-view="all"><span class="nav-icon">◈</span> Source catalog <span class="nav-count" id="all-count"></span></button>
+        <button class="nav-item" data-view="featured"><span class="nav-icon">✦</span> Featured</button>
+        <button class="nav-item" data-view="favorites"><span class="nav-icon">♡</span> Favorites</button>
+        <button class="nav-item" data-view="recent"><span class="nav-icon">◷</span> Recently played</button>
+      </nav>
+      <div class="side-caption category-caption">CATEGORIES</div>
+      <nav class="category-nav" id="category-nav" aria-label="Game categories"></nav>
+      <div class="sidebar-bottom"><span class="status-dot"></span><span>Curated for a quick escape</span></div>
+    </aside>
+
+    <main class="main-content" id="home">
+      <header class="topbar">
+        <button class="mobile-menu" id="menu-toggle" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb">LIBRARY <span>/</span> <b id="view-label">ALL GAMES</b></div>
+        <a class="top-link" href="#about">About the library <span>↗</span></a>
+      </header>
+
+      <section class="hero" id="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-star">✦</span> YOUR NEXT QUICK ESCAPE</div>
+          <h1>Play something<br><em>good.</em></h1>
+          <p>A small corner of the internet for big breaks.<br>Find a game, settle in, forget the clock.</p>
+          <a class="hero-cta" href="#library">Explore the library <span>↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orb orb-one"></div><div class="orb orb-two"></div>
+          <div class="hero-ring ring-one"></div><div class="hero-ring ring-two"></div>
+          <div class="hero-sled">✦</div><span class="hero-label label-top">A LITTLE FUN</span><span class="hero-label label-bottom">GOES A LONG WAY</span>
+        </div>
+        <div class="hero-index">01 <span>—</span> 19</div>
+      </section>
+
+      <section class="featured-section" id="featured-section">
+        <div class="section-heading"><div><p class="section-kicker">THE SPOTLIGHT</p><h2>Featured game</h2></div><span class="source-note">HANDPICKED FOR YOU</span></div>
+        <article class="feature-card" id="feature-card"></article>
+      </section>
+
+      <section class="library-section" id="library">
+        <div class="section-heading library-heading"><div><p class="section-kicker">PICK YOUR MOOD</p><h2 id="library-title">The library <span id="result-count"></span></h2></div><div class="heading-actions"><button class="clear-history" id="clear-history" hidden>Clear history</button><label class="sort-control">SORT BY <select id="sort-select"><option value="featured">Featured</option><option value="az">A–Z</option><option value="newest">Recently added</option><option value="played">Recently played</option></select></label></div></div>
+        <div class="toolbar">
+          <label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Search games, genres, keywords…" autocomplete="off"><kbd>⌘ K</kbd><button id="clear-search" aria-label="Clear search" hidden>×</button></label>
+          <div class="filter-row" id="filter-row" aria-label="Filter by category"></div>
+          <div class="device-filter-wrap"><span class="device-filter-label">DEVICE COMPATIBILITY</span><div class="filter-row device-filter-row" id="device-filter-row" aria-label="Filter by device compatibility"></div></div>
+        </div>
+        <div class="game-grid" id="game-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden><div class="empty-icon">⌕</div><h3>No games found</h3><p>Try another title or clear the category filter.</p><button class="text-button" id="reset-filters">Clear filters</button></div>
+      </section>
+
+      <footer id="about"><div class="footer-brand"><span class="brand-mark"><i></i><i></i><i></i><i></i></span> night<span>arcade</span></div><p>Games by their original creators. Publisher games may include ads.</p><div class="footer-right">Favorites & history stay on this device.</div></footer>
+    </main>
+  </div>
+  <section class="inline-launcher" id="inline-launcher" role="dialog" aria-modal="true" aria-labelledby="inline-game-title" hidden>
+    <header class="inline-launcher-bar"><a class="inline-brand" href="#home" aria-label="Night Arcade"><span class="brand-mark"><i></i><i></i><i></i><i></i></span></a><h2 id="inline-game-title">Game</h2><span class="inline-status" id="inline-status">Loading…</span><button id="inline-fullscreen" type="button">Fullscreen</button><button class="inline-return" id="inline-return" type="button">Return to library</button></header>
+    <div class="inline-game-frame"><div class="inline-loading" id="inline-loading">Loading game…</div><iframe id="inline-frame" title="Game" allow="fullscreen; autoplay; gamepad; accelerometer; gyroscope" allowfullscreen></iframe></div>
+  </section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js?v=20261019-2" defer></script>
+</body>
+</html>
