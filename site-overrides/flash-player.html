@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITLE}} - Night Arcade</title>
+<style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;color:#eee;font:13px Arial,sans-serif}body{display:flex;flex-direction:column}header{height:44px;flex:none;display:flex;align-items:center;gap:12px;padding:0 12px;background:#11151c}strong{flex:1}button{font:inherit;color:inherit;background:#202633;border:1px solid #455062;border-radius:4px;padding:6px 9px;cursor:pointer}#stage{flex:1;min-height:0;position:relative}#stage:fullscreen{width:100vw;height:100vh}ruffle-player{width:100%;height:100%;display:block}#error{position:absolute;inset:0;display:grid;place-items:center;padding:24px}#error[hidden]{display:none}</style>
+</head><body><header><strong>{{TITLE}}</strong><button id="fullscreen">Fullscreen</button><button id="close">Library</button></header>
+<main id="stage"><div id="error" hidden></div></main>
+<script>
+window.RufflePlayer = {config:{autoplay:'on',unmuteOverlay:'visible',allowScriptAccess:false,openUrlMode:'deny',scale:'showAll',backgroundColor:'#000000',publicPath:new URL('../../vendor/ruffle/',document.baseURI).href}};
+const stage=document.getElementById('stage');
+document.getElementById('fullscreen').onclick=()=>stage.requestFullscreen().catch(()=>{});
+document.getElementById('close').onclick=()=>window.close();
+window.addEventListener('load',async()=>{
+  try {
+    const player=window.RufflePlayer.newest().createPlayer();
+    stage.append(player);
+    await player.ruffle().load({url:new URL('game.swf',document.baseURI).href});
+  } catch(error) {
+    const message=document.getElementById('error');
+    message.hidden=false;message.textContent='This game could not start: '+error.message;
+  }
+});
+</script><script src="../../vendor/ruffle/ruffle.js"></script></body></html>
