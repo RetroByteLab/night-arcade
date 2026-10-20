@@ -21,21 +21,21 @@
     "thumbnailSourceUrl": "https://www.y8.com/games/snow_rider_3d",
     "symbol": "✦",
     "accent": "#363149",
-    "sourceUrl": "https://gamebiz.com/game/snow-rider-3d",
-    "sourceName": "Official Snow Rider 3D page",
-    "sourceInfo": "Official source alternative. Existing local files have unverified reuse rights and are not offered for launch or publication.",
-    "license": "External link only",
-    "launchMethod": "external",
-    "compatibility": "external",
-    "compatibilityNote": "Authorized HTML redistribution or embedding has not been established. Open the official game instead.",
+    "sourceUrl": "https://www.miniplay.com/game/snow-rider-3d",
+    "sourceName": "Miniplay Snow Rider 3D embed",
+    "sourceInfo": "Miniplay's game page explicitly supplies https://www.miniplay.com/embed/snow-rider-3d for embedding. Only a local player wrapper is hosted; game assets and the provider's SDK remain unchanged on publisher servers. This does not grant redistribution rights to the game files.",
+    "license": "Publisher-provided embed HTML",
+    "launchMethod": "about-blank-html",
+    "compatibility": "untested",
+    "compatibilityNote": "Publisher-supplied embed endpoint responded successfully on 2026-10-20. Uses the existing about:blank HTML launcher. Gameplay, popup behavior for this game, mobile and fullscreen have not been browser-tested; publisher availability and ads may affect loading.",
     "added": "2026-09-29",
     "featured": false,
-    "status": "External website required",
+    "status": "Not tested",
     "officialGameUrl": "https://gamebiz.com/game/snow-rider-3d",
     "deviceCompatibility": [
       "needs-review"
     ],
-    "localPath": "games/snow-rider-3d/index.html"
+    "localPath": "games/snow-rider-miniplay/index.html"
   },
   {
     "id": "labyrinth",
