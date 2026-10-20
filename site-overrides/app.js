@@ -154,14 +154,21 @@ function applyFullscreenStyles(doc) {
   doc.head.append(style);
 }
 
+function writeBlankDocument(popup, html) {
+  // Run document.open in the popup's realm so it retains its about:blank URL.
+  const script = popup.document.createElement('script');
+  script.textContent = `document.open();document.write(${JSON.stringify(html)});document.close();`;
+  popup.document.body.append(script);
+}
+
 async function openHtmlBlank(game) {
   const localPath = typeof game.localPath === 'string' && /^games\/[a-z0-9-]+\/index\.html$/.test(game.localPath) ? game.localPath : '';
   if (!localPath) { showToast('No local HTML file is available for this game.'); return false; }
   const popup = window.open('about:blank', '_blank');
   if (!popup || popup.closed) { showToast('The blank tab was blocked by the browser.'); return false; }
   try {
-    popup.document.write('<!doctype html><html><head><title>Night Arcade</title></head><body style="background:#090c14;color:white;font:16px Arial;padding:24px">Loading game HTML...</body></html>');
-    popup.document.close();
+    popup.document.body.style.cssText = 'background:#090c14;color:white;font:16px Arial;padding:24px';
+    popup.document.body.textContent = 'Loading game HTML...';
     const url = new URL(localPath, document.baseURI);
     const response = await fetch(url, {cache:'no-store'});
     if (!response.ok) throw new Error(`HTML request failed (${response.status})`);
@@ -177,9 +184,7 @@ async function openHtmlBlank(game) {
     player.defer = true;
     player.src = new URL('embed-player.js?v=20261020-3', document.baseURI).href;
     parsed.head.append(player);
-    popup.document.open();
-    popup.document.write('<!doctype html>' + parsed.documentElement.outerHTML);
-    popup.document.close();
+    writeBlankDocument(popup, '<!doctype html>' + parsed.documentElement.outerHTML);
     popup.opener = null;
     try { popup.focus(); } catch { /* Focusing is not a launch requirement. */ }
     return true;
@@ -200,14 +205,12 @@ function openPublisherBlank(game) {
   if (!popup || popup.closed) return false;
   try {
     const doc = popup.document;
-    doc.open();
-    doc.write(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Night Arcade</title><style>
+    writeBlankDocument(popup, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Night Arcade</title><style>
       *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#090c14;color:#edf0f7;font:13px Arial,Helvetica,sans-serif}
       .bar{height:52px;display:flex;align-items:center;gap:10px;padding:0 12px;border-bottom:1px solid #333;background:#11151c}.name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:bold}.state{color:#b3bac8;font-size:11px}
       button,a{flex:none;padding:8px;border:1px solid #414a5b;border-radius:4px;background:#202633;color:inherit;text-decoration:none;font:12px Arial,Helvetica,sans-serif;cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid #81d9df;outline-offset:2px}
       iframe{width:100%;height:calc(100% - 52px);border:0;background:#11151c}.loading{position:absolute;inset:52px 0 0;display:grid;place-items:center;pointer-events:none;background:#11151c}body.loaded .loading{display:none}@media(max-width:640px){.state{display:none}.bar{gap:6px;padding:0 8px}button,a{font-size:11px;padding:8px 6px}}
     </style></head><body><header class="bar"><span class="name" id="name"></span><span class="state" id="state">Loading publisher game</span><a id="publisher" target="_blank" rel="noopener noreferrer" title="Play directly on the publisher's website">Publisher ↗</a><button id="fullscreen" type="button">Fullscreen</button><button id="return" type="button">Library</button></header><div class="loading">Loading publisher game...</div><iframe id="game" allow="fullscreen; autoplay; gamepad; accelerometer; gyroscope" allowfullscreen sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups"></iframe></body></html>`);
-    doc.close();
     applyFullscreenStyles(doc);
     doc.title = `${game.title} - Night Arcade`;
     doc.getElementById('name').textContent = game.title;
@@ -241,9 +244,7 @@ function openAboutBlank(game) {
   const playUrl = new URL(localPath, document.baseURI).href;
   const label = esc(game.title);
   try {
-    popup.document.open();
-    popup.document.write(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${label} — Night Arcade</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#090c14;color:#e9edf5;font:13px system-ui,sans-serif}.bar{height:42px;position:absolute;z-index:5;inset:0 0 auto;display:flex;align-items:center;gap:12px;padding:0 13px;background:#0c1019ee;border-bottom:1px solid #283143}.name{font-weight:650}.state{color:#92a0b5;font-size:11px}.grow{flex:1}.bar button,.bar a{padding:6px 10px;border:1px solid #394252;border-radius:4px;color:#e4e8f1;background:#171d2a;text-decoration:none;cursor:pointer;font:11px system-ui,sans-serif}.bar button:hover,.bar a:hover{border-color:#a994ff}.bar .back{background:#a994ff;color:#171322;border-color:#a994ff;font-weight:700}iframe{position:absolute;inset:42px 0 0;width:100%;height:calc(100% - 42px);border:0;background:#0d1019}.hint{position:absolute;z-index:4;inset:42px 0 0;display:grid;place-items:center;color:#abb5c5;background:#101520;pointer-events:none}body.loaded .hint{display:none}@media(max-width:520px){.bar{height:48px}.state{display:none}iframe{inset:48px 0 0;height:calc(100% - 48px)}}</style></head><body><header class="bar"><span class="name">${label}</span><span class="state" id="state">Opening your game…</span><span class="grow"></span><button id="fullscreen" type="button">Fullscreen</button><button class="back" id="return" type="button">Return to library</button></header><div class="hint" id="hint">Loading game…</div><iframe id="game" title="${label}" allow="fullscreen; autoplay; gamepad; accelerometer; gyroscope" allowfullscreen></iframe><script>const frame=document.getElementById('game'),status=document.getElementById('state');frame.addEventListener('load',()=>{document.body.classList.add('loaded');status.textContent='Game ready';});frame.src=${JSON.stringify(playUrl)};document.getElementById('fullscreen').addEventListener('click',async()=>{try{await frame.requestFullscreen();}catch{status.textContent='Fullscreen unavailable in this browser';}});document.getElementById('return').addEventListener('click',()=>window.close());setTimeout(()=>{if(!document.body.classList.contains('loaded')){status.textContent='Still loading — check your connection';}},10000);</script></body></html>`);
-    popup.document.close();
+    writeBlankDocument(popup, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${label} — Night Arcade</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#090c14;color:#e9edf5;font:13px system-ui,sans-serif}.bar{height:42px;position:absolute;z-index:5;inset:0 0 auto;display:flex;align-items:center;gap:12px;padding:0 13px;background:#0c1019ee;border-bottom:1px solid #283143}.name{font-weight:650}.state{color:#92a0b5;font-size:11px}.grow{flex:1}.bar button,.bar a{padding:6px 10px;border:1px solid #394252;border-radius:4px;color:#e4e8f1;background:#171d2a;text-decoration:none;cursor:pointer;font:11px system-ui,sans-serif}.bar button:hover,.bar a:hover{border-color:#a994ff}.bar .back{background:#a994ff;color:#171322;border-color:#a994ff;font-weight:700}iframe{position:absolute;inset:42px 0 0;width:100%;height:calc(100% - 42px);border:0;background:#0d1019}.hint{position:absolute;z-index:4;inset:42px 0 0;display:grid;place-items:center;color:#abb5c5;background:#101520;pointer-events:none}body.loaded .hint{display:none}@media(max-width:520px){.bar{height:48px}.state{display:none}iframe{inset:48px 0 0;height:calc(100% - 48px)}}</style></head><body><header class="bar"><span class="name">${label}</span><span class="state" id="state">Opening your game…</span><span class="grow"></span><button id="fullscreen" type="button">Fullscreen</button><button class="back" id="return" type="button">Return to library</button></header><div class="hint" id="hint">Loading game…</div><iframe id="game" title="${label}" allow="fullscreen; autoplay; gamepad; accelerometer; gyroscope" allowfullscreen></iframe><script>const frame=document.getElementById('game'),status=document.getElementById('state');frame.addEventListener('load',()=>{document.body.classList.add('loaded');status.textContent='Game ready';});frame.src=${JSON.stringify(playUrl)};document.getElementById('fullscreen').addEventListener('click',async()=>{try{await frame.requestFullscreen();}catch{status.textContent='Fullscreen unavailable in this browser';}});document.getElementById('return').addEventListener('click',()=>window.close());setTimeout(()=>{if(!document.body.classList.contains('loaded')){status.textContent='Still loading — check your connection';}},10000);</script></body></html>`);
     applyFullscreenStyles(popup.document);
     popup.opener = null;
   } catch {
