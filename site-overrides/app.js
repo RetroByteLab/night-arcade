@@ -20,7 +20,7 @@ function hasBlankLaunch(game) { return ['about-blank-local', 'about-blank-embed'
 function isLibraryEntry(game) { return hasBlankLaunch(game) || game.libraryVisible === true; }
 function playButtonText(game) {
   if (game.compatibility === 'incompatible') return 'Compatibility details';
-  if (!hasBlankLaunch(game)) return game.id === 'snow-rider-3d' ? 'Play on official site' : game.releaseType === 'download' ? 'Creator download page' : 'View source';
+  if (!hasBlankLaunch(game)) return game.id === 'snow-rider-3d' ? 'Unavailable' : game.releaseType === 'download' ? 'Creator download page' : 'View source';
   if (typeof game.playLabel === 'string') return esc(game.playLabel);
   return 'Play';
 }
@@ -58,8 +58,9 @@ function updateNav() {
 function gameCard(game, index) {
   const favorite = getFavorites().has(game.id);
   const external = !hasBlankLaunch(game);
+  const unavailable = external && game.id === 'snow-rider-3d';
   const publisher = game.launchMethod === 'about-blank-embed';
-  const cardStatus = game.compatibility === 'supported' ? 'About:blank supported' : game.compatibility === 'untested' ? 'Jump in' : 'External website required';
+  const cardStatus = unavailable ? 'Awaiting authorized HTML' : game.compatibility === 'supported' ? 'About:blank supported' : game.compatibility === 'untested' ? 'Jump in' : 'External website required';
   const description = game.description === 'Publisher-provided HTML game embed.' ? '' : game.description;
   const buttonText = playButtonText(game);
   const thumbnail = game.thumbnail ? safeHttpUrl(new URL(game.thumbnail, document.baseURI).href) : '';
@@ -69,7 +70,7 @@ function gameCard(game, index) {
   const showLicense = game.license !== 'Publisher-provided embed HTML';
   return `<article class="game-card">
     <div class="card-art" style="--art:${esc(game.accent || '#292f40')}">${thumbnail ? `<img src="${esc(thumbnail)}" alt="" loading="lazy" decoding="async">` : ''}<span class="art-symbol" aria-hidden="true">${esc(game.symbol || '✦')}</span><span class="game-number">${String(index + 1).padStart(2, '0')}</span><button class="favorite-button ${favorite ? 'is-favorite' : ''}" data-favorite="${esc(game.id)}" aria-label="${favorite ? 'Remove from' : 'Add to'} favorites" aria-pressed="${favorite}">${favorite ? '♥' : '♡'}</button></div>
-    <div class="card-info"><div class="card-title-row"><h3 title="${esc(game.title)}">${esc(game.title)}</h3></div><button class="card-play" data-play="${esc(game.id)}"><span>${external ? '↗' : '▶'}</span>${buttonText}</button>${warnings.map((warning) => `<div class="content-warning" role="note">⚠ ${esc(warning)}</div>`).join('')}${description ? `<p>${esc(description)}</p>` : ''}<div class="card-meta"><span class="game-category">${esc((game.categories || ['Other'])[0])}</span><span class="compat-badge ${external || game.compatibility !== 'supported' ? 'external' : ''}" title="${esc(game.compatibilityNote)}" aria-label="Status: ${esc(cardStatus)}">${esc(cardStatus)}</span></div>${publisher && source ? `<a class="publisher-play" href="${esc(source)}" target="_blank" rel="noopener noreferrer">Open on publisher ↗</a>` : ''}</div>
+    <div class="card-info"><div class="card-title-row"><h3 title="${esc(game.title)}">${esc(game.title)}</h3></div><button class="card-play" data-play="${esc(game.id)}" ${unavailable ? 'disabled title="Awaiting an authorized HTML version"' : ''}><span>${external && !unavailable ? '↗' : '▶'}</span>${buttonText}</button>${warnings.map((warning) => `<div class="content-warning" role="note">⚠ ${esc(warning)}</div>`).join('')}${description ? `<p>${esc(description)}</p>` : ''}<div class="card-meta"><span class="game-category">${esc((game.categories || ['Other'])[0])}</span><span class="compat-badge ${external || game.compatibility !== 'supported' ? 'external' : ''}" title="${esc(game.compatibilityNote)}" aria-label="Status: ${esc(cardStatus)}">${esc(cardStatus)}</span></div>${publisher && source ? `<a class="publisher-play" href="${esc(source)}" target="_blank" rel="noopener noreferrer">Open on publisher ↗</a>` : ''}</div>
     ${source ? `<div class="card-source"><a href="${esc(source)}" target="_blank" rel="noopener noreferrer" title="${esc(game.sourceInfo || game.sourceName || 'Game source')}">${publisher ? 'Publisher ↗' : game.id === 'snow-rider-3d' ? 'Official game ↗' : 'Source ↗'}</a>${showLicense ? licenseUrl ? `<a href="${esc(licenseUrl)}" target="_blank" rel="noopener noreferrer" title="${esc(game.sourceInfo)}">${esc(game.license)}</a>` : `<span title="${esc(game.license || 'License not recorded')}">${esc(game.license || 'License not recorded')}</span>` : ''}</div>` : ''}
   </article>`;
 }
@@ -261,6 +262,7 @@ function openCompatibilityNotice(game) {
 function launchGame(id) {
   const game = getById(id);
   if (!game) return;
+  if (game.id === 'snow-rider-3d' && !hasBlankLaunch(game)) { showToast('Snow Rider needs an authorized HTML version before it can launch here.'); return; }
   const source = safeHttpUrl(game.sourceUrl);
   if (game.launchMethod === 'about-blank-html') {
     openHtmlBlank(game).then((opened) => { if (opened) { recordPlay(id); renderGrid(); } });
