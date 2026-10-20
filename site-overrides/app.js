@@ -165,6 +165,10 @@ async function openHtmlBlank(game) {
     base.href = url.href;
     parsed.head.prepend(base);
     applyFullscreenStyles(parsed);
+    const player = parsed.createElement('script');
+    player.defer = true;
+    player.src = new URL('embed-player.js?v=20261020-3', document.baseURI).href;
+    parsed.head.append(player);
     popup.document.open();
     popup.document.write('<!doctype html>' + parsed.documentElement.outerHTML);
     popup.document.close();
