@@ -1,8 +1,9 @@
 name: Publish Night Arcade library
 on:
-  release:
-    types: [published]
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['site-overrides/**', '.github/workflows/pages.yml']
 
 permissions:
   contents: read
@@ -20,6 +21,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v4
       - name: Download checked publishing archive
         run: |
           curl --fail --location --retry 3 "https://github.com/${GITHUB_REPOSITORY}/releases/download/v1.0.0/night-arcade-google-sites.zip" --output /tmp/library.zip
@@ -27,6 +29,8 @@ jobs:
           mkdir _site
           unzip -q /tmp/library.zip -d _site
           touch _site/.nojekyll
+      - name: Apply reviewed interface updates
+        run: cp site-overrides/app.js site-overrides/styles.css site-overrides/index.html _site/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static library
