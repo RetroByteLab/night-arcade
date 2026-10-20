@@ -3379,31 +3379,31 @@
   {
     "id": "classic-basketball-stars",
     "title": "Basketball Stars",
-    "description": "Take on basketball duels, including local two-player matches.",
+    "description": "One-on-one basketball with local two-player matches.",
     "categories": [
       "Sports",
       "Multiplayer"
     ],
     "keywords": [
       "basketball stars",
-      "Sports",
-      "Multiplayer"
+      "publisher embed"
     ],
-    "thumbnail": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=204,height=204,fit=cover,f=auto/bc02c9cdfc5b424ddf343b01edf791ce/basketball-stars-logo.png",
-    "sourceUrl": "https://poki.com/en/g/basketball-stars",
-    "sourceName": "Poki game page",
-    "sourceInfo": "Existing third-party game linked from Poki's public catalog. No game files were copied; no embedding or redistribution permission is claimed.",
-    "license": "External link only",
-    "launchMethod": "external",
-    "compatibility": "external",
-    "compatibilityNote": "Play at the game's listed publisher page. Authorized embedding and about:blank compatibility have not been verified, so Night Arcade does not frame this game.",
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Basketball-Stars.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/basketball-stars",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/basketball-stars",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-basketball-stars/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Popup opening and about:blank address checked in browser. Full gameplay and fullscreen compatibility have not passed complete testing.",
     "deviceCompatibility": [
       "needs-review"
     ],
-    "added": "2026-10-19",
-    "featured": true,
-    "featuredRank": 13,
-    "playLabel": "Play on Poki"
+    "added": "2026-10-20",
+    "featured": false
   },
   {
     "id": "classic-tennis-masters",
@@ -3669,31 +3669,31 @@
   {
     "id": "classic-basketball-legends-2020",
     "title": "Basketball Legends 2020",
-    "description": "Play Basketball Legends 2020 on Poki.",
+    "description": "Arcade basketball tournaments and local matches.",
     "categories": [
       "Sports",
       "Multiplayer"
     ],
     "keywords": [
       "basketball legends 2020",
-      "Sports",
-      "Multiplayer"
+      "publisher embed"
     ],
-    "thumbnail": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=94,height=94,fit=cover,f=auto/a1d3004c30bfd422125e43a558629ad4/basketball-legends-2020-logo.png",
-    "sourceUrl": "https://poki.com/en/g/basketball-legends-2020",
-    "sourceName": "Poki game page",
-    "sourceInfo": "Existing third-party game linked from Poki's public catalog. No game files were copied; no embedding or redistribution permission is claimed.",
-    "license": "External link only",
-    "launchMethod": "external",
-    "compatibility": "external",
-    "compatibilityNote": "Play at the game's listed publisher page. Authorized embedding and about:blank compatibility have not been verified, so Night Arcade does not frame this game.",
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/basketball-legens-2020.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/basketball-legends-2020",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/basketball-legends-2020",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-basketball-legends-2020/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Popup opening and about:blank address checked in browser. Full gameplay and fullscreen compatibility have not passed complete testing.",
     "deviceCompatibility": [
       "needs-review"
     ],
-    "added": "2026-10-19",
-    "featured": true,
-    "featuredRank": 14,
-    "playLabel": "Play on Poki"
+    "added": "2026-10-20",
+    "featured": false
   },
   {
     "id": "classic-power-badminton",
@@ -11692,6 +11692,123 @@
     "compatibility": "untested",
     "status": "Not tested",
     "compatibilityNote": "Official embed endpoint responds, but about:blank gameplay and fullscreen have not been verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-backrooms",
+    "title": "Backrooms",
+    "description": "Explore the Backrooms and search for a way out.",
+    "categories": [
+      "Adventure"
+    ],
+    "keywords": [
+      "backrooms",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Backrooms/backrooms.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/backrooms",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/backrooms",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-backrooms/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Popup opening and about:blank address checked in browser. Full gameplay and fullscreen compatibility have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-basketbros-io",
+    "title": "BasketBros.io",
+    "description": "Fast arcade basketball from the BasketBros series.",
+    "categories": [
+      "Sports",
+      "Multiplayer"
+    ],
+    "keywords": [
+      "basketbros io",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/basketbros-io.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/basketbros-io",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/basketbros-io",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-basketbros-io/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Popup opening and about:blank address checked in browser. Full gameplay and fullscreen compatibility have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-volley-random",
+    "title": "Volley Random",
+    "description": "Ragdoll volleyball with changing courts and one-button controls.",
+    "categories": [
+      "Sports",
+      "Multiplayer",
+      "Arcade"
+    ],
+    "keywords": [
+      "volley random",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/o1/Volley_random/volley-random.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/volley-random",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/volley-random",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-volley-random/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Popup opening and about:blank address checked in browser. Full gameplay and fullscreen compatibility have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-boxing-random",
+    "title": "Boxing Random",
+    "description": "One-button ragdoll boxing with changing arenas.",
+    "categories": [
+      "Sports",
+      "Multiplayer",
+      "Arcade"
+    ],
+    "keywords": [
+      "boxing random",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Boxing_Random/boxing-random.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/boxing-random",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/boxing-random",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-boxing-random/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Popup opening and about:blank address checked in browser. Full gameplay and fullscreen compatibility have not passed complete testing.",
     "deviceCompatibility": [
       "needs-review"
     ],
