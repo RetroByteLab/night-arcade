@@ -6,7 +6,7 @@ let games = [];
 let activeView = 'blank';
 let activeCategory = '';
 let activeDevice = '';
-let sortMode = 'featured';
+let sortMode = 'az';
 let searchTerm = '';
 let toastTimer;
 
@@ -298,6 +298,7 @@ function bindUi() {
   document.querySelectorAll('.nav-item').forEach((button) => button.addEventListener('click', () => { activeView = button.dataset.view; activeCategory = ''; activeDevice = ''; renderCategories(); renderGrid(); $('#sidebar').classList.remove('open'); scrollToLibrary(); }));
   $('#search-input').addEventListener('input', (event) => { searchTerm = event.target.value.trim(); $('#clear-search').hidden = !event.target.value; renderGrid(); });
   $('#clear-search').addEventListener('click', () => { $('#search-input').value = ''; searchTerm = ''; $('#clear-search').hidden = true; renderGrid(); $('#search-input').focus(); });
+  $('#sort-select').value = sortMode;
   $('#sort-select').addEventListener('change', (event) => { sortMode = event.target.value; renderGrid(); });
   $('#clear-history').addEventListener('click', () => { try { localStorage.removeItem(STORE.recent); } catch { showToast('This browser does not allow clearing local history.'); return; } renderGrid(); showToast('Recently played history cleared'); });
   $('#inline-return').addEventListener('click', () => { $('#inline-frame').src = 'about:blank'; $('#inline-launcher').hidden = true; });
