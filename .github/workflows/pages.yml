@@ -37,6 +37,7 @@ jobs:
           cp -R site-overrides/games/. _site/games/
           cp -R site-overrides/vendor _site/
           cp site-overrides/REQUESTED-GAMES.md _site/
+          cp site-overrides/catalog-sources/flipline.json site-overrides/catalog-sources/random-sports.json _site/catalog-sources/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static library
