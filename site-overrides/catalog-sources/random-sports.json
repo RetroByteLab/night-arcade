@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Basket Random",
+    "sourceUrl": "https://www.twoplayergames.org/game/basket-random",
+    "embedUrl": "https://www.twoplayergames.org/embed/basket-random",
+    "pageSha256": "fa94fce7427caa38608b14e80bf2b4b6795d69e52eb2410101fce94623c43304",
+    "evidence": "Public Embed control and window.gameData.embedFrame on the original publisher page.",
+    "verification": "untested",
+    "localPath": "games/basket-random/index.html"
+  },
+  {
+    "title": "Soccer Random",
+    "sourceUrl": "https://www.twoplayergames.org/game/soccer-random",
+    "embedUrl": "https://www.twoplayergames.org/embed/soccer-random",
+    "pageSha256": "67ce90c03592a91ab34ff0340dda66fccdc31e1d257dfd20e9f82a48c16de413",
+    "evidence": "Public Embed control and window.gameData.embedFrame on the original publisher page.",
+    "verification": "untested",
+    "localPath": "games/soccer-random/index.html"
+  }
+]
