@@ -30,7 +30,7 @@ jobs:
           unzip -q /tmp/library.zip -d _site
           touch _site/.nojekyll
       - name: Apply reviewed interface updates
-        run: cp site-overrides/app.js site-overrides/styles.css site-overrides/index.html site-overrides/games.json _site/
+        run: cp site-overrides/app.js site-overrides/styles.css site-overrides/index.html site-overrides/games.json site-overrides/embed-player.js site-overrides/embed-sizes.json _site/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static library
