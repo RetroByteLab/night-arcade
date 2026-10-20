@@ -1,0 +1,562 @@
+{
+  "/embed/slope": {
+    "width": 960,
+    "height": 641
+  },
+  "/embed/moto_x3m_2": {
+    "width": 900,
+    "height": 600
+  },
+  "/embed/noughts_and_crosses": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/skytrip": {
+    "width": 900,
+    "height": 600
+  },
+  "/embed/hide_online": {
+    "width": 960,
+    "height": 600
+  },
+  "/embed/military_wars_3d_multiplayer": {
+    "width": 960,
+    "height": 716
+  },
+  "/embed/football_legends_2019": {
+    "width": 800,
+    "height": 480
+  },
+  "/embed/master_chess": {
+    "width": 568,
+    "height": 600
+  },
+  "/embed/death_run_3d": {
+    "width": 900,
+    "height": 670
+  },
+  "/embed/rolling_sky_trip": {
+    "width": 900,
+    "height": 900
+  },
+  "/embed/four_colors": {
+    "width": 960,
+    "height": 600
+  },
+  "/embed/impossible_bike_stunt_3d": {
+    "width": 960,
+    "height": 656
+  },
+  "/embed/russian_extreme_offroad": {
+    "width": 960,
+    "height": 580
+  },
+  "/embed/grandpa_run_3d": {
+    "width": 710,
+    "height": 1065
+  },
+  "/embed/pixel_road_taxi_depot": {
+    "width": 960,
+    "height": 650
+  },
+  "/embed/parkour_go_2_urban": {
+    "width": 960,
+    "height": 600
+  },
+  "/embed/moto_trials_junkyard_2": {
+    "width": 700,
+    "height": 570
+  },
+  "/embed/penalty_kicks": {
+    "width": 900,
+    "height": 600
+  },
+  "/embed/stunt_racers_extreme": {
+    "width": 976,
+    "height": 610
+  },
+  "/embed/bike_riders": {
+    "width": 976,
+    "height": 732
+  },
+  "/embed/goal_keeper_challenge": {
+    "width": 800,
+    "height": 560
+  },
+  "/embed/mayhem_racing": {
+    "width": 976,
+    "height": 610
+  },
+  "/embed/slope_multiplayer": {
+    "width": 900,
+    "height": 506
+  },
+  "/embed/grand_race": {
+    "width": 800,
+    "height": 520
+  },
+  "/embed/maze": {
+    "width": 640,
+    "height": 800
+  },
+  "/embed/truck_driver_crazy_road_2": {
+    "width": 960,
+    "height": 656
+  },
+  "/embed/stickman_boost_2": {
+    "width": 960,
+    "height": 540
+  },
+  "/embed/masked_shooters_multiplayer_edition": {
+    "width": 960,
+    "height": 660
+  },
+  "/embed/stickman_boost": {
+    "width": 800,
+    "height": 575
+  },
+  "/embed/color_spin": {
+    "width": 360,
+    "height": 630
+  },
+  "/embed/punch_boxing_championship": {
+    "width": 960,
+    "height": 630
+  },
+  "/embed/ultimate_tictactoe": {
+    "width": 500,
+    "height": 900
+  },
+  "/embed/car_rush": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/russian_uaz_offroad_driving_3d": {
+    "width": 960,
+    "height": 596
+  },
+  "/embed/truck_driver_crazy_road": {
+    "width": 980,
+    "height": 670
+  },
+  "/embed/swimming_pro": {
+    "width": 960,
+    "height": 660
+  },
+  "/embed/snake_and_blocks": {
+    "width": 588,
+    "height": 735
+  },
+  "/embed/slot_car_racing": {
+    "width": 960,
+    "height": 540
+  },
+  "/embed/downhill_rush": {
+    "width": 800,
+    "height": 640
+  },
+  "/embed/war_of_metal": {
+    "width": 960,
+    "height": 643
+  },
+  "/embed/connect_4": {
+    "width": 800,
+    "height": 559
+  },
+  "/embed/bike_rider_2_armageddon": {
+    "width": 800,
+    "height": 640
+  },
+  "/embed/sea_monsters_food_duel": {
+    "width": 800,
+    "height": 580
+  },
+  "/embed/xracer": {
+    "width": 900,
+    "height": 600
+  },
+  "/embed/snake_and_ladders": {
+    "width": 800,
+    "height": 595
+  },
+  "/embed/highway_squad": {
+    "width": 900,
+    "height": 660
+  },
+  "/embed/8_ball_pool": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/cliff_diving": {
+    "width": 600,
+    "height": 800
+  },
+  "/embed/water_scooter_mania": {
+    "width": 800,
+    "height": 650
+  },
+  "/embed/mtb_pro_racer": {
+    "width": 904,
+    "height": 678
+  },
+  "/embed/pizza_party": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/rc_super_racer": {
+    "width": 820,
+    "height": 626
+  },
+  "/embed/traffic_road": {
+    "width": 860,
+    "height": 676
+  },
+  "/embed/make_a_car_simulator": {
+    "width": 960,
+    "height": 650
+  },
+  "/embed/foosball": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/supermoto_gt": {
+    "width": 900,
+    "height": 675
+  },
+  "/embed/coach_bus_simulator": {
+    "width": 960,
+    "height": 540
+  },
+  "/embed/superbike_gtx": {
+    "width": 800,
+    "height": 640
+  },
+  "/embed/soccer_champ": {
+    "width": 800,
+    "height": 480
+  },
+  "/embed/woblox": {
+    "width": 473,
+    "height": 740
+  },
+  "/embed/noughts_and_crosses_halloween": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/battle_towers": {
+    "width": 800,
+    "height": 536
+  },
+  "/embed/nexgen_tennis": {
+    "width": 960,
+    "height": 640
+  },
+  "/embed/downhill_ski": {
+    "width": 960,
+    "height": 640
+  },
+  "/embed/snake_and_ladder": {
+    "width": 960,
+    "height": 590
+  },
+  "/embed/taz_mechanic_simulator": {
+    "width": 960,
+    "height": 585
+  },
+  "/embed/100_metres_race": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/baseball_pro": {
+    "width": 576,
+    "height": 700
+  },
+  "/embed/europe_flags": {
+    "width": 480,
+    "height": 680
+  },
+  "/embed/boxing_physics": {
+    "width": 880,
+    "height": 580
+  },
+  "/embed/robotic_sports_tennis": {
+    "width": 960,
+    "height": 540
+  },
+  "/embed/rise_up": {
+    "width": 493,
+    "height": 739
+  },
+  "/embed/supercars_puzzle": {
+    "width": 900,
+    "height": 540
+  },
+  "/embed/robotex": {
+    "width": 800,
+    "height": 450
+  },
+  "/embed/hurdles": {
+    "width": 960,
+    "height": 492
+  },
+  "/embed/rooster_warrior": {
+    "width": 954,
+    "height": 600
+  },
+  "/embed/hillside_bus_simulator_3d": {
+    "width": 960,
+    "height": 630
+  },
+  "/embed/catch_the_ball_2": {
+    "width": 800,
+    "height": 450
+  },
+  "/embed/ludo_classic": {
+    "width": 394,
+    "height": 701
+  },
+  "/embed/real_car_simulator_3d_2018": {
+    "width": 960,
+    "height": 640
+  },
+  "/embed/tanque_3d_sports": {
+    "width": 700,
+    "height": 550
+  },
+  "/embed/billiards": {
+    "width": 800,
+    "height": 450
+  },
+  "/embed/dd_slices": {
+    "width": 500,
+    "height": 700
+  },
+  "/embed/math_nerd": {
+    "width": 480,
+    "height": 855
+  },
+  "/embed/air_hockey": {
+    "width": 529,
+    "height": 794
+  },
+  "/embed/classic_bowling": {
+    "width": 480,
+    "height": 600
+  },
+  "/embed/open_restaurant": {
+    "width": 1000,
+    "height": 600
+  },
+  "/embed/cyber_unicorn_assembly": {
+    "width": 900,
+    "height": 480
+  },
+  "/embed/supercar_wash": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/kwiki_soccer": {
+    "width": 960,
+    "height": 630
+  },
+  "/embed/pool_8_ball": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/funny_soccer": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/guess_the_emoji": {
+    "width": 554,
+    "height": 888
+  },
+  "/embed/millionaire": {
+    "width": 890,
+    "height": 501
+  },
+  "/embed/y8_rocket_simulator": {
+    "width": 450,
+    "height": 800
+  },
+  "/embed/asia_flags": {
+    "width": 480,
+    "height": 640
+  },
+  "/embed/airport_rush": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/the_lucid_void": {
+    "width": 950,
+    "height": 620
+  },
+  "/embed/square_adventure": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/six_helix": {
+    "width": 480,
+    "height": 700
+  },
+  "/embed/car_driving_test_simulator": {
+    "width": 960,
+    "height": 630
+  },
+  "/embed/burger_maker": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/interstellar_legends": {
+    "width": 1280,
+    "height": 720
+  },
+  "/embed/heavy_mining_simulator": {
+    "width": 960,
+    "height": 630
+  },
+  "/embed/cube_ninja": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/bus_driver_simulator": {
+    "width": 960,
+    "height": 630
+  },
+  "/embed/the_boy_and_the_golem": {
+    "width": 960,
+    "height": 640
+  },
+  "/embed/greedy_rabbit": {
+    "width": 998,
+    "height": 624
+  },
+  "/embed/moto_taxi_sim": {
+    "width": 800,
+    "height": 630
+  },
+  "/embed/parkours_edge": {
+    "width": 800,
+    "height": 641
+  },
+  "/embed/moto_delivery_simulator": {
+    "width": 800,
+    "height": 630
+  },
+  "/embed/blackforest_maker": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/swing_robber": {
+    "width": 493,
+    "height": 739
+  },
+  "/embed/chocolate_mousse_maker": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/weapon_quest_3d": {
+    "width": 960,
+    "height": 600
+  },
+  "/embed/candy_train": {
+    "width": 800,
+    "height": 420
+  },
+  "/embed/forest_range_adventure": {
+    "width": 800,
+    "height": 450
+  },
+  "/embed/cute_pasta_maker": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/ninja_run": {
+    "width": 800,
+    "height": 450
+  },
+  "/embed/stunt_plane_racer": {
+    "width": 960,
+    "height": 640
+  },
+  "/embed/cake_design": {
+    "width": 635,
+    "height": 950
+  },
+  "/embed/running_santa": {
+    "width": 866,
+    "height": 488
+  },
+  "/embed/naomi_s_cute_phone": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/t-rex_runner_v1": {
+    "width": 800,
+    "height": 450
+  },
+  "/embed/cox": {
+    "width": 960,
+    "height": 643
+  },
+  "/embed/cat_vs_dog": {
+    "width": 500,
+    "height": 702
+  },
+  "/embed/mine_rusher": {
+    "width": 344,
+    "height": 625
+  },
+  "/embed/olaf_the_viking": {
+    "width": 800,
+    "height": 568
+  },
+  "/embed/viking_brawl": {
+    "width": 800,
+    "height": 450
+  },
+  "/embed/santa_or_thief": {
+    "width": 341,
+    "height": 606
+  },
+  "/embed/crazy_runner": {
+    "width": 800,
+    "height": 450
+  },
+  "/embed/wothan_escape": {
+    "width": 532,
+    "height": 800
+  },
+  "/embed/king_of_bikes": {
+    "width": 960,
+    "height": 640
+  },
+  "/embed/ninja_adventure": {
+    "width": 890,
+    "height": 500
+  },
+  "/embed/wothan_the_barbarian": {
+    "width": 435,
+    "height": 652
+  },
+  "/embed/super_kid_adventure": {
+    "width": 960,
+    "height": 540
+  },
+  "/embed/night_before_easter_mobile": {
+    "width": 800,
+    "height": 480
+  },
+  "/embed/cyclops_ruins": {
+    "width": 555,
+    "height": 650
+  },
+  "/embed/gingerman_rescue": {
+    "width": 800,
+    "height": 600
+  },
+  "/embed/stick_soldier": {
+    "width": 358,
+    "height": 634
+  }
+}
