@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Soccer Random - Night Arcade</title>
+  <style>
+    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#090c14;color:#edf0f7;font:13px Arial,Helvetica,sans-serif}
+    header{height:44px;display:flex;align-items:center;gap:12px;padding:0 12px;border-bottom:1px solid #333;background:#11151c}strong{flex:1;min-width:0}a{color:#c0dce7}button{padding:6px 9px;background:#202633;color:inherit;border:1px solid #455062;border-radius:4px;cursor:pointer;font:inherit}
+    iframe{display:block;width:100%;height:calc(100% - 44px);border:0;margin:0;padding:0}#status{font-size:11px;color:#b3bac8}@media(max-width:520px){#status{display:none}}
+    strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  </style>
+</head>
+<body>
+  <header><strong>Soccer Random</strong><span id="status">Loading game frame...</span><a href="https://www.twoplayergames.org/game/soccer-random" target="_blank" rel="noopener noreferrer">Publisher source</a><button id="fullscreen" type="button">Fullscreen</button><button id="close" type="button">Library</button></header>
+  <!-- Official publisher embed exposed by the game page's Embed control. -->
+  <iframe id="game" title="Soccer Random" src="https://www.twoplayergames.org/embed/soccer-random" scrolling="no" allow="fullscreen; autoplay; gamepad" allowfullscreen sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups"></iframe>
+  <script>
+    const game = document.getElementById('game');
+    const status = document.getElementById('status');
+    game.addEventListener('load', () => { status.textContent = 'Game frame loaded'; });
+    document.getElementById('fullscreen').addEventListener('click', async () => {
+      try { await game.requestFullscreen(); }
+      catch { status.textContent = 'Fullscreen unavailable'; }
+    });
+    document.getElementById('close').addEventListener('click', () => window.close());
+  </script>
+</body>
+</html>
