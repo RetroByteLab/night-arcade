@@ -1,0 +1,112 @@
+{
+  "permissionUrl": "https://www.flipline.com/freegames.html",
+  "permission": "Flipline supplies these ZIPs for uploading to other websites. Original SWFs and attribution are retained. Not a license for paid mobile or Deluxe editions.",
+  "pageSha256": "a3920ecedac84e0cbf8feafd163ffc6e18e1e14a0059db03b74a20b4c890d79e",
+  "games": [
+    {
+      "url": "https://i.flipline.com/downloads/papasscooperia_102.zip",
+      "sha256": "a40b6073b08ec6c5ad741299e74ccc75c57cd4ea65c86fa01ce922fe9443516a",
+      "title": "Papa's Scooperia",
+      "id": "flipline-papa-s-scooperia",
+      "swfMember": "papasscooperia/papasscooperia_v102.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papassushiria_101.zip",
+      "sha256": "45530839504741639efe811eb5e0283c3d1a4db76f596b92d718230e71dd8e52",
+      "title": "Papa's Sushiria",
+      "id": "flipline-papa-s-sushiria",
+      "swfMember": "papassushiria_101/papassushiria.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papasbakeria_101.zip",
+      "sha256": "103c9bdea59440577f2cfda63ca3bf8117a74ee313533d4e4e0a1fa8d4c5dafc",
+      "title": "Papa's Bakeria",
+      "id": "flipline-papa-s-bakeria",
+      "swfMember": "papasbakeria.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papascheeseria_102.zip",
+      "sha256": "b5cbecb91255d409cb9df862e157d0f0dfc12cda5f8c7fbb5b67062351ce9cde",
+      "title": "Papa's Cheeseria",
+      "id": "flipline-papa-s-cheeseria",
+      "swfMember": "papascheeseria_102/papascheeseria_102.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papasdonuteria_102.zip",
+      "sha256": "d7b0a1cba13630778d36f923d96fa48b510ae3f03a3536d23fa7ff53b8bc9225",
+      "title": "Papa's Donuteria",
+      "id": "flipline-papa-s-donuteria",
+      "swfMember": "papasdonuteria/papasdonuteria.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papaspastaria.zip",
+      "sha256": "c34234c53bdc299cf7407c11c30bc018d77211c2a97a7e70d78f8830d87fd96b",
+      "title": "Papa's Pastaria",
+      "id": "flipline-papa-s-pastaria",
+      "swfMember": "papaspastaria/papaspastaria.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papascupcakeria.zip",
+      "sha256": "22c9e117bfeb9bf6624ceed83de0bb082604a8b367c098adba223840a83c9129",
+      "title": "Papa's Cupcakeria",
+      "id": "flipline-papa-s-cupcakeria",
+      "swfMember": "papascupcakeria/papascupcakeria.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papashotdoggeria.zip",
+      "sha256": "280dd2d7491849fafdef7a5580493c428cf62fd4489b76445526e2bafce2eb42",
+      "title": "Papa's Hot Doggeria",
+      "id": "flipline-papa-s-hot-doggeria",
+      "swfMember": "papashotdoggeria/papashotdoggeria.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papaswingeria.zip",
+      "sha256": "84733ccfbbc4b65841d1ffe20765c964ce1a1f71ff60b4f4d223aeb7c98de446",
+      "title": "Papa's Wingeria",
+      "id": "flipline-papa-s-wingeria",
+      "swfMember": "papaswingeria/papaswingeria.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papaspancakeria.zip",
+      "sha256": "d53f4823e1f503536b09f38254400da1d72acef0c9d30dd00dd15a4b390c1150",
+      "title": "Papa's Pancakeria",
+      "id": "flipline-papa-s-pancakeria",
+      "swfMember": "papaspancakeria/papaspancakeria.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papasfreezeria.zip",
+      "sha256": "358b1ac31626542139a1d97cbb90fac3b4fef5dc951a7c415f8465462f110620",
+      "title": "Papa's Freezeria",
+      "id": "flipline-papa-s-freezeria",
+      "swfMember": "papasfreezeria/papasfreezeria.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papastacomia.zip",
+      "sha256": "d7bdb2d635fef955cf0ad36cd3394842663f8723c9e1e3c83b0ee9cfd54d1ea1",
+      "title": "Papa's Taco Mia!",
+      "id": "flipline-papa-s-taco-mia",
+      "swfMember": "papastacomia/papastacomia.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papasburgeria.zip",
+      "sha256": "a7312f7ba326a816d85422e3c7f2b66f4498e16042d099cf50e793e617f94696",
+      "title": "Papa's Burgeria",
+      "id": "flipline-papa-s-burgeria",
+      "swfMember": "papasburgeria/papasburgeria.swf"
+    },
+    {
+      "url": "https://i.flipline.com/downloads/papaspizzeria.zip",
+      "sha256": "f2142499e31ae254cd7faab6684741fb9dc70edae6c4e7197c8cc2f6396693f2",
+      "title": "Papa's Pizzeria",
+      "id": "flipline-papa-s-pizzeria",
+      "swfMember": "papaspizzeria/papaspizzeria_v2.swf"
+    }
+  ],
+  "ruffle": {
+    "version": "0.7.1",
+    "url": "https://registry.npmjs.org/@ruffle-rs/ruffle/-/ruffle-0.7.1.tgz",
+    "sha256": "dc9e7407549a91accc41a14932b0b9d9a9d51a3742ce6f020888c8a76682b157",
+    "license": "(MIT OR Apache-2.0)",
+    "sourceUrl": "https://github.com/ruffle-rs/ruffle"
+  }
+}
