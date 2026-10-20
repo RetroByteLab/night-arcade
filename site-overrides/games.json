@@ -5261,35 +5261,6 @@
     "symbol": "CC"
   },
   {
-    "id": "classic-basket-random",
-    "title": "Basket Random",
-    "description": "One-button basketball with unpredictable courts and local two-player matches.",
-    "categories": [
-      "Sports",
-      "Multiplayer"
-    ],
-    "keywords": [
-      "basket random",
-      "Sports",
-      "Multiplayer"
-    ],
-    "thumbnail": "https://images.twoplayergames.org/files/games/other/Basket_Random/basket-random.jpg?auto=format&w=200",
-    "sourceUrl": "https://www.twoplayergames.org/game/basket-random",
-    "sourceName": "Creator / publisher page",
-    "sourceInfo": "Existing third-party game linked from Poki's public catalog. No game files were copied; no embedding or redistribution permission is claimed.",
-    "license": "External link only",
-    "launchMethod": "external",
-    "compatibility": "external",
-    "compatibilityNote": "Play at the game's listed publisher page. Authorized embedding and about:blank compatibility have not been verified, so Night Arcade does not frame this game.",
-    "deviceCompatibility": [
-      "needs-review"
-    ],
-    "added": "2026-10-19",
-    "featured": true,
-    "featuredRank": 3,
-    "playLabel": "Play on publisher"
-  },
-  {
     "id": "y8-moto-x3m-2",
     "title": "Moto X3M 2",
     "description": "Publisher-provided HTML game embed.",
@@ -11244,5 +11215,487 @@
     "added": "2026-10-19",
     "featured": false,
     "featuredRank": 500
+  },
+  {
+    "id": "flipline-papa-s-scooperia",
+    "title": "Papa's Scooperia",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-scooperia/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-scooperia/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-sushiria",
+    "title": "Papa's Sushiria",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-sushiria/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-sushiria/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-bakeria",
+    "title": "Papa's Bakeria",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-bakeria/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-bakeria/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-cheeseria",
+    "title": "Papa's Cheeseria",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-cheeseria/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-cheeseria/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-donuteria",
+    "title": "Papa's Donuteria",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-donuteria/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-donuteria/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-pastaria",
+    "title": "Papa's Pastaria",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-pastaria/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-pastaria/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-cupcakeria",
+    "title": "Papa's Cupcakeria",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-cupcakeria/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-cupcakeria/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-hot-doggeria",
+    "title": "Papa's Hot Doggeria",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-hot-doggeria/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-hot-doggeria/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-wingeria",
+    "title": "Papa's Wingeria",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-wingeria/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-wingeria/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-pancakeria",
+    "title": "Papa's Pancakeria",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-pancakeria/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-pancakeria/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-freezeria",
+    "title": "Papa's Freezeria",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-freezeria/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-freezeria/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-taco-mia",
+    "title": "Papa's Taco Mia!",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-taco-mia/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-taco-mia/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-burgeria",
+    "title": "Papa's Burgeria",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-burgeria/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-burgeria/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "flipline-papa-s-pizzeria",
+    "title": "Papa's Pizzeria",
+    "description": "The original Flipline cooking classic.",
+    "categories": [
+      "Simulation"
+    ],
+    "keywords": [
+      "papa",
+      "cooking",
+      "restaurant",
+      "flash"
+    ],
+    "thumbnail": "games/flipline-papa-s-pizzeria/thumbnail.jpg",
+    "sourceUrl": "https://www.flipline.com/freegames.html",
+    "sourceName": "Flipline Studios",
+    "sourceInfo": "Official publisher distribution package; original SWF is unchanged. Runs using the open-source Ruffle Flash emulator.",
+    "license": "Publisher-authorized free website distribution",
+    "licenseUrl": "https://www.flipline.com/freegames.html",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/flipline-papa-s-pizzeria/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Authorized original SWF with Ruffle. Full gameplay and about:blank compatibility are not yet verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "classic-basket-random",
+    "title": "Basket Random",
+    "description": "One-button local sports matches.",
+    "categories": [
+      "Sports",
+      "Multiplayer",
+      "Arcade"
+    ],
+    "keywords": [
+      "random",
+      "sports",
+      "2 player"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Basket_Random/basket-random.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/basket-random",
+    "sourceName": "RHM Interactive / TwoPlayerGames",
+    "sourceInfo": "Original publisher exposes an Embed control and the embedFrame URL. No game files are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/basket-random",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/basket-random/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Official embed endpoint responds, but about:blank gameplay and fullscreen have not been verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "soccer-random",
+    "title": "Soccer Random",
+    "description": "One-button local sports matches.",
+    "categories": [
+      "Sports",
+      "Multiplayer",
+      "Arcade"
+    ],
+    "keywords": [
+      "random",
+      "sports",
+      "2 player"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Soccer_Random/soccer-random.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/soccer-random",
+    "sourceName": "RHM Interactive / TwoPlayerGames",
+    "sourceInfo": "Original publisher exposes an Embed control and the embedFrame URL. No game files are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/soccer-random",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/soccer-random/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Official embed endpoint responds, but about:blank gameplay and fullscreen have not been verified.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
   }
 ]
