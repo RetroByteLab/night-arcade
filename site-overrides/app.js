@@ -131,7 +131,15 @@ function openInlineLauncher(game) {
   $('#inline-status').textContent = 'Pop-up blocked; playing here';
   $('#inline-loading').hidden = false;
   panel.hidden = false;
-  frame.onload = () => { $('#inline-loading').hidden = true; $('#inline-status').textContent = 'Game ready'; };
+  frame.onload = () => {
+    $('#inline-loading').hidden = true;
+    $('#inline-status').textContent = 'Game ready';
+    try {
+      const player = frame.contentDocument.createElement('script');
+      player.src = new URL('embed-player.js?v=20261020-3', document.baseURI).href;
+      frame.contentDocument.head.append(player);
+    } catch { /* Only our same-origin wrappers can be sized here. */ }
+  };
   frame.src = new URL(localPath, document.baseURI).href;
   $('#inline-return').focus();
   return true;
