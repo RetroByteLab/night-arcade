@@ -17,9 +17,10 @@ function readRecent() { try { const value = JSON.parse(localStorage.getItem(STOR
 function writeSet(key, value) { try { localStorage.setItem(key, JSON.stringify([...value])); } catch { showToast('This browser is not saving local preferences.'); } }
 function safeHttpUrl(value) { try { const url = new URL(value); return ['https:', 'http:'].includes(url.protocol) ? url.href : ''; } catch { return ''; } }
 function hasBlankLaunch(game) { return ['about-blank-local', 'about-blank-embed', 'about-blank-html'].includes(game.launchMethod); }
+function isLibraryEntry(game) { return hasBlankLaunch(game) || game.libraryVisible === true; }
 function playButtonText(game) {
   if (game.compatibility === 'incompatible') return 'Compatibility details';
-  if (!hasBlankLaunch(game)) return game.releaseType === 'download' ? 'Creator download page' : 'View source';
+  if (!hasBlankLaunch(game)) return game.id === 'snow-rider-3d' ? 'Play on official site' : game.releaseType === 'download' ? 'Creator download page' : 'View source';
   if (typeof game.playLabel === 'string') return esc(game.playLabel);
   return 'Play';
 }
@@ -28,7 +29,7 @@ function getById(id) { return games.find((game) => game.id === id); }
 function showToast(message) { const node = $('#toast'); node.textContent = message; node.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => node.classList.remove('show'), 2800); }
 
 function renderCategories() {
-  const pool = activeView === 'blank' ? games.filter(hasBlankLaunch) : games;
+  const pool = activeView === 'blank' ? games.filter(isLibraryEntry) : games;
   $('#category-nav').innerHTML = CATEGORIES.map((name) => `<button class="category-item" data-category="${esc(name)}"><span class="category-glyph">${CATEGORY_ICONS[name]}</span>${esc(name)}<span class="category-count">${pool.filter((game) => game.categories.includes(name)).length}</span></button>`).join('');
   $('#filter-row').innerHTML = `<button class="filter-chip ${activeCategory ? '' : 'selected'}" data-category="">All categories</button>` + CATEGORIES.map((name) => `<button class="filter-chip ${activeCategory === name ? 'selected' : ''}" data-category="${esc(name)}">${esc(name)}</button>`).join('');
   $('#device-filter-row').innerHTML = DEVICE_FILTERS.map(([label, value]) => `<button class="filter-chip ${activeDevice === value ? 'selected' : ''}" data-device="${esc(value)}">${esc(label)}</button>`).join('');
@@ -47,11 +48,11 @@ function renderCategories() {
 }
 
 function updateNav() {
-  const labels = { all: 'SOURCE CATALOG', blank: 'ABOUT:BLANK HTML', featured: 'FEATURED', favorites: 'FAVORITES', recent: 'RECENTLY PLAYED' };
+  const labels = { all: 'SOURCE CATALOG', blank: 'GAME LIBRARY', favorites: 'FAVORITES', recent: 'RECENTLY PLAYED' };
   document.querySelectorAll('.nav-item').forEach((button) => button.classList.toggle('active', button.dataset.view === activeView));
   $('#view-label').textContent = activeCategory || (activeDevice ? DEVICE_FILTERS.find(([, value]) => value === activeDevice)?.[0]?.toUpperCase() : labels[activeView]) || 'ALL GAMES';
   $('#all-count').textContent = games.length;
-  $('#blank-count').textContent = games.filter(hasBlankLaunch).length;
+  $('#blank-count').textContent = games.filter(isLibraryEntry).length;
 }
 
 function gameCard(game, index) {
@@ -75,8 +76,7 @@ function gameCard(game, index) {
 
 function getVisibleGames() {
   let visible = [...games];
-  if (activeView === 'blank') visible = visible.filter(hasBlankLaunch);
-  if (activeView === 'featured') visible = visible.filter((game) => game.featured);
+  if (activeView === 'blank') visible = visible.filter(isLibraryEntry);
   if (activeView === 'favorites') { const favorites = getFavorites(); visible = visible.filter((game) => favorites.has(game.id)); }
   if (activeView === 'recent') { const recent = readRecent(); visible = recent.map(getById).filter(Boolean); }
   if (activeCategory) visible = visible.filter((game) => (game.categories || []).includes(activeCategory));
@@ -88,7 +88,7 @@ function getVisibleGames() {
   if (sortMode === 'az') visible.sort((a, b) => a.title.localeCompare(b.title));
   if (sortMode === 'newest') visible.sort((a, b) => String(b.added || '').localeCompare(String(a.added || '')) || a.title.localeCompare(b.title));
   if (sortMode === 'played') { const recent = readRecent(); visible.sort((a, b) => { const ai = recent.indexOf(a.id); const bi = recent.indexOf(b.id); return (ai < 0 ? Infinity : ai) - (bi < 0 ? Infinity : bi) || a.title.localeCompare(b.title); }); }
-  if (sortMode === 'featured') visible.sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)) || (a.featuredRank ?? 999) - (b.featuredRank ?? 999) || a.title.localeCompare(b.title));
+  if (sortMode === 'featured') visible.sort((a, b) => (a.featuredRank ?? 999) - (b.featuredRank ?? 999) || a.title.localeCompare(b.title));
   return visible;
 }
 
@@ -101,7 +101,7 @@ function renderGrid() {
   $('#game-grid').hidden = shown.length === 0;
   $('#clear-history').hidden = activeView !== 'recent' || readRecent().length === 0;
   $('#library-title').firstChild.textContent = activeView === 'favorites' ? 'Your favorites ' : activeView === 'recent' ? 'Recently played ' : activeCategory ? `${activeCategory} games ` : activeDevice ? `${DEVICE_FILTERS.find(([, value]) => value === activeDevice)?.[0]} games ` : activeView === 'featured' ? 'Featured games ' : 'The library ';
-  if (activeView === 'blank') $('#library-title').firstChild.textContent = activeCategory ? `${activeCategory} HTML games ` : 'About:blank HTML games ';
+  if (activeView === 'blank') $('#library-title').firstChild.textContent = activeCategory ? `${activeCategory} games ` : 'Game library ';
   if (activeView === 'all' && !activeCategory && !activeDevice) $('#library-title').firstChild.textContent = 'Source catalog ';
   document.querySelectorAll('[data-favorite]').forEach((button) => button.addEventListener('click', () => toggleFavorite(button.dataset.favorite)));
   document.querySelectorAll('[data-play]').forEach((button) => button.addEventListener('click', () => launchGame(button.dataset.play)));
@@ -111,16 +111,7 @@ function toggleFavorite(id) {
   const favorites = getFavorites();
   if (favorites.has(id)) { favorites.delete(id); showToast('Removed from favorites'); }
   else { favorites.add(id); showToast('Added to favorites'); }
-  writeSet(STORE.favorites, favorites); renderGrid(); renderFeature();
-}
-
-function renderFeature() {
-  const game = games.find((item) => item.id === 'classic-slope' && hasBlankLaunch(item)) || games.find((item) => item.featured && hasBlankLaunch(item));
-  if (!game) { $('#featured-section').hidden = true; return; }
-  const source = safeHttpUrl(game.sourceUrl);
-  const thumbnail = safeHttpUrl(new URL(game.thumbnail, document.baseURI).href);
-  $('#feature-card').innerHTML = `<div class="feature-art">${thumbnail ? `<img src="${esc(thumbnail)}" alt="${esc(game.title)}">` : ''}</div><div class="feature-copy"><span class="feature-tag">✦ FEATURED · ${esc((game.categories || ['GAME'])[0]).toUpperCase()}</span><h3>${esc(game.title)}</h3><p>${esc(game.description)}</p><div class="feature-actions"><button class="play-button" data-feature-play="${esc(game.id)}">${playButtonText(game)}</button>${source ? `<a class="source-link" href="${esc(source)}" target="_blank" rel="noopener noreferrer">${game.id === 'snow-rider-3d' ? 'Public copy source' : 'Original source'}</a>` : ''}</div><span class="feature-compat">${esc(game.compatibilityNote)}</span></div>`;
-  $('[data-feature-play]').addEventListener('click', () => launchGame(game.id));
+  writeSet(STORE.favorites, favorites); renderGrid();
 }
 
 function recordPlay(id) {
@@ -299,7 +290,7 @@ async function init() {
     if (!Array.isArray(data)) throw new Error('Game catalog must be a JSON array.');
     const ids = new Set();
     games = data.filter((game) => game && typeof game.id === 'string' && /^[a-z0-9-]+$/.test(game.id) && !ids.has(game.id) && (ids.add(game.id), true) && typeof game.title === 'string' && typeof game.description === 'string' && Array.isArray(game.categories));
-    renderCategories(); updateNav(); renderFeature(); renderGrid();
+    renderCategories(); updateNav(); renderGrid();
   } catch (error) {
     $('#game-grid').hidden = true; $('#empty-state').hidden = false;
     $('#empty-state h3').textContent = 'Could not load the game catalog';
