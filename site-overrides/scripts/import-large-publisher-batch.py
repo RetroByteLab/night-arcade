@@ -64,6 +64,38 @@ PICKS = [
     ('ultimate-flying-car-2', 'Racing', 'Explore another city with driving and flying cars.'),
     ('offroad-masters-challenge', 'Racing', 'Drive across rugged routes and off-road challenges.'),
 ]
+POPULAR_PICKS = [
+    ('vex-3', 'Platformer', 'Run, jump and climb through precision platform courses.'),
+    ('vex-4', 'Platformer', 'Take on the next chapter of Vex obstacle courses.'),
+    ('vex-5', 'Platformer', 'Time jumps and slides through challenging platform stages.'),
+    ('vex-6', 'Platformer', 'Explore another set of Vex platform challenges.'),
+    ('vex-7', 'Platformer', 'Navigate elaborate platform courses with new tools.'),
+    ('vex-8', 'Platformer', 'Try another chapter of the Vex platform series.'),
+    ('fireboy-and-watergirl-3-in-the-ice-temple', 'Puzzle', 'Solve cooperative puzzles across slippery ice-temple rooms.'),
+    ('fireboy-and-watergirl-4-the-crystal-temple', 'Puzzle', 'Work together to solve crystal-temple platform puzzles.'),
+    ('fireboy-and-watergirl-5-elements', 'Puzzle', 'Guide the duo through temples with different elemental puzzles.'),
+    ('fireboy-and-watergirl-6-fairy-tales', 'Puzzle', 'Help the duo solve puzzles with magical fairy companions.'),
+    ('bad-ice-cream-2', 'Arcade', 'Collect fruit and shape ice walls in another maze adventure.'),
+    ('bad-ice-cream-3', 'Arcade', 'Return to fruit-filled mazes and ice-wall puzzles.'),
+    ('gun-mayhem-2-more-mayhem', 'Arcade', 'Compete in chaotic cartoon platform arena matches.'),
+    ('gun-mayhem-redux', 'Arcade', 'Play quick cartoon arena battles with wobbly platform action.'),
+    ('tank-trouble', 'Arcade', 'Navigate maze arenas in compact cartoon tank battles.'),
+    ('get-on-top', 'Multiplayer', 'Outbalance an opponent in a two-player physics contest.'),
+    ('football-bros', 'Sports', 'Play fast arcade American-football matches.'),
+    ('soccer-bros', 'Sports', 'Compete in quick arcade soccer duels.'),
+    ('wrestle-bros', 'Sports', 'Play exaggerated cartoon wrestling matches.'),
+    ('moto-x3m-spooky-land', 'Racing', 'Race a motorbike across spooky-themed stunt courses.'),
+    ('moto-x3m-pool-party', 'Racing', 'Race through water-park-themed motorbike stunt courses.'),
+    ('soccer-physics', 'Sports', 'Play one-button soccer with unpredictable physics.'),
+    ('super-fighters', 'Arcade', 'Play compact cartoon action arenas with local multiplayer.'),
+    ('stick-badminton', 'Sports', 'Play quick badminton matches with stick-figure athletes.'),
+    ('g-switch-2', 'Platformer', 'Switch gravity through fast futuristic running courses.'),
+    ('football-legends-2021', 'Sports', 'Compete in arcade soccer matches and tournaments.'),
+    ('vex-hyper-dash', 'Platformer', 'Time jumps and dashes through fast Vex courses.'),
+    ('money-movers-3-guard-duty', 'Puzzle', 'Coordinate two characters through cooperative platform puzzles.'),
+    ('gun-mayhem', 'Arcade', 'Play the original cartoon platform arena game.'),
+    ('ping-pong-chaos', 'Sports', 'Compete in quick physics-based table-tennis rounds.'),
+]
 
 
 class GameLinks(HTMLParser):
@@ -100,17 +132,30 @@ def build(records):
 
 
 def main():
+    global MANIFEST
     parser = argparse.ArgumentParser()
     parser.add_argument('--build-only', action='store_true')
+    parser.add_argument('--popular', action='store_true', help='Add twenty recognizable classics and series entries.')
     args = parser.parse_args()
+    target_count = 20 if args.popular else 40
+    if args.popular:
+        MANIFEST = ROOT / 'catalog-sources/popular-publishers.json'
     if args.build_only:
         build(json.loads(MANIFEST.read_text()))
         return
     catalog = json.loads((ROOT / 'games.json').read_text())
     inventory = GameLinks()
     inventory.feed(fetch(INDEX))
+    if args.popular:
+        for section in ['/', '/classic', '/platform', '/1-player', '/sport', '/racing']:
+            inventory.feed(fetch('https://www.twoplayergames.org' + section))
+        # These primary game pages were separately found and checked through web search.
+        inventory.links.update({
+            'vex-7': 'https://www.twoplayergames.org/game/vex-7',
+            'vex-hyper-dash': 'https://www.twoplayergames.org/game/vex-hyper-dash',
+        })
     records = []
-    for slug, category, description in PICKS:
+    for slug, category, description in (POPULAR_PICKS if args.popular else PICKS):
         if slug not in inventory.links:
             print('Not listed, skipped: ' + slug, flush=True)
             continue
@@ -134,17 +179,18 @@ def main():
             categories.append('Arcade')
         elif category == 'Platformer':
             categories.append('Adventure')
-        game = {'id': game_id, 'title': data['title'], 'description': description, 'categories': categories, 'keywords': [slug.replace('-', ' '), 'publisher embed'], 'thumbnail': 'https://images.twoplayergames.org/files/games/' + data['imageFile'], 'sourceUrl': page, 'sourceName': 'TwoPlayerGames publisher embed', 'sourceInfo': 'Listed in the publisher own-games catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.', 'license': 'Publisher-provided embed HTML', 'licenseUrl': page, 'launchMethod': 'about-blank-html', 'localPath': path, 'compatibility': 'untested', 'status': 'Not tested', 'compatibilityNote': 'Publisher-provided embed responded successfully. Gameplay, actual popup rendering, redirects, mobile and fullscreen have not passed complete browser testing.', 'deviceCompatibility': ['needs-review'], 'added': '2026-10-20', 'featured': False}
+        game = {'id': game_id, 'title': data['title'], 'description': description, 'categories': categories, 'keywords': [slug.replace('-', ' '), 'publisher embed'], 'thumbnail': 'https://images.twoplayergames.org/files/games/' + data['imageFile'], 'sourceUrl': page, 'sourceName': 'TwoPlayerGames publisher embed', 'sourceInfo': 'Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.', 'license': 'Publisher-provided embed HTML', 'licenseUrl': page, 'launchMethod': 'about-blank-html', 'localPath': path, 'compatibility': 'untested', 'status': 'Not tested', 'compatibilityNote': 'Publisher-provided embed responded successfully. Gameplay, actual popup rendering, redirects, mobile and fullscreen have not passed complete browser testing.', 'deviceCompatibility': ['needs-review'], 'added': '2026-10-20', 'featured': False}
         if prior:
             catalog[catalog.index(prior)] = game
         else:
             catalog.append(game)
-        records.append({'catalogId': game_id, 'title': data['title'], 'sourceUrl': page, 'embedUrl': data['embedFrame'], 'localPath': path, 'pageSha256': hashlib.sha256(content.encode()).hexdigest(), 'embedPageSha256': hashlib.sha256(embed_content.encode()).hexdigest(), 'embedHttpResponse': 200, 'evidence': 'Public publisher own-games listing, explicit Embed control and supplied embedFrame. Embed only, not redistribution of game assets.', 'verification': 'untested'})
-        print('Prepared ' + str(len(records)) + '/40: ' + data['title'], flush=True)
-        if len(records) == 40:
+        evidence = 'Publisher game page with explicit Embed control and supplied embedFrame. Embed only, not redistribution of game assets.'
+        records.append({'catalogId': game_id, 'title': data['title'], 'sourceUrl': page, 'embedUrl': data['embedFrame'], 'localPath': path, 'pageSha256': hashlib.sha256(content.encode()).hexdigest(), 'embedPageSha256': hashlib.sha256(embed_content.encode()).hexdigest(), 'embedHttpResponse': 200, 'evidence': evidence, 'selectionBasis': 'Recognizable browser-game series and local multiplayer classics; not a measured global popularity ranking.' if args.popular else 'Publisher own-games catalog', 'verification': 'untested'})
+        print('Prepared ' + str(len(records)) + '/' + str(target_count) + ': ' + data['title'], flush=True)
+        if len(records) == target_count:
             break
-    if len(records) != 40:
-        raise ValueError('Fewer than forty new entries verified; catalog has not been changed.')
+    if len(records) != target_count:
+        raise ValueError('Fewer than the requested new entries verified; catalog has not been changed.')
     build(records)
     MANIFEST.write_text(json.dumps(records, indent=2) + '\n')
     (ROOT / 'games.json').write_text(json.dumps(catalog, indent=2, ensure_ascii=False) + '\n')
