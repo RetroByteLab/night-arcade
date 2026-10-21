@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Money Movers 2 - Night Arcade</title>
+<style>*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#000;color:#edf0f7;font:13px Arial,Helvetica,sans-serif}body{display:flex;flex-direction:column}header{height:44px;flex:none;display:flex;align-items:center;gap:12px;padding:0 12px;background:#11151c}strong{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}a{color:#c0dce7}button{padding:6px 9px;background:#202633;color:inherit;border:1px solid #455062;border-radius:4px;cursor:pointer;font:inherit}#stage{position:relative;flex:1;min-height:0;overflow:hidden}#stage:fullscreen{width:100vw;height:100vh}iframe{display:block;width:100%;height:100%;border:0;margin:0;padding:0}#status{font-size:11px;color:#b3bac8}@media(max-width:520px){#status{display:none}}</style>
+</head><body><header><strong>Money Movers 2</strong><span id="status">Loading game frame...</span><a href="https://www.twoplayergames.org/game/money-movers-2" target="_blank" rel="noopener noreferrer">Publisher source</a><button id="fullscreen">Fullscreen</button><button id="close">Library</button></header>
+<main id="stage"><iframe id="game" title="Money Movers 2" src="https://www.twoplayergames.org/embed/money-movers-2" scrolling="no" allow="fullscreen;autoplay;gamepad" allowfullscreen sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-popups"></iframe></main>
+<script>
+const frame=document.getElementById('game'),status=document.getElementById('status');
+frame.addEventListener('load',()=>{status.textContent='Game frame loaded';});
+document.getElementById('fullscreen').onclick=async()=>{try{await document.getElementById('stage').requestFullscreen();}catch{status.textContent='Fullscreen unavailable';}};
+document.getElementById('close').onclick=()=>window.close();
+</script></body></html>
