@@ -13618,5 +13618,99 @@
     ],
     "added": "2026-10-20",
     "featured": false
+  },
+  {
+    "id": "miniplay-friday-night-funkin",
+    "title": "Friday Night Funkin'",
+    "description": "Match arrow prompts to the music in the publisher-hosted browser edition.",
+    "categories": [
+      "Arcade"
+    ],
+    "keywords": [
+      "friday night funkin",
+      "FNF",
+      "publisher embed"
+    ],
+    "thumbnail": "https://www5.minijuegosgratis.com/v3/games/thumbnails/235653_1.jpg",
+    "sourceUrl": "https://www.miniplay.com/game/friday-night-funkin",
+    "sourceName": "Miniplay publisher embed",
+    "sourceInfo": "Miniplay credits NinjaMuffin99, PhantomArcade3K, Evilsk8r and Kawaisprite. This is the publisher browser edition, not a claim to the latest official build. The publisher explicitly supplies this iframe for embedding. Only the local player wrapper is hosted; no game code, artwork or music is redistributed.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.miniplay.com/game/friday-night-funkin",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/miniplay-friday-night-funkin/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "warnings": [],
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "miniplay-baldis-fun-new-school-remastered",
+    "title": "Baldi's Fun New School Remastered (Fan Game)",
+    "description": "Explore a fan-made Baldi school adventure with multiple game modes.",
+    "categories": [
+      "Adventure"
+    ],
+    "keywords": [
+      "baldis fun new school remastered",
+      "Baldi",
+      "publisher embed"
+    ],
+    "thumbnail": "https://www3.minijuegosgratis.com/v3/games/thumbnails/241545_1.jpg",
+    "sourceUrl": "https://www.miniplay.com/game/baldis-fun-new-school-remastered",
+    "sourceName": "Miniplay publisher embed",
+    "sourceInfo": "A fan-made Baldi game, not mystman12's original Baldi's Basics or Baldi's Basics Plus. The publisher explicitly supplies this iframe for embedding. Only the local player wrapper is hosted; no game code, artwork or music is redistributed.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.miniplay.com/game/baldis-fun-new-school-remastered",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/miniplay-baldis-fun-new-school-remastered/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "warnings": [
+      "Jump scares."
+    ],
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "miniplay-five-nights-at-freddys-remaster",
+    "title": "Five Nights at Freddy's Remaster (Fan Game)",
+    "description": "Monitor a spooky pizzeria in a fan-made security-camera survival game.",
+    "categories": [
+      "Adventure"
+    ],
+    "keywords": [
+      "five nights at freddys remaster",
+      "FNAF",
+      "publisher embed"
+    ],
+    "thumbnail": "https://www4.minijuegosgratis.com/v3/games/thumbnails/247471_1.jpg",
+    "sourceUrl": "https://www.miniplay.com/game/five-nights-at-freddys-remaster",
+    "sourceName": "Miniplay publisher embed",
+    "sourceInfo": "Miniplay credits SimusDev. This is a fan remake, not an original Scott Cawthon FNAF release. The publisher explicitly supplies this iframe for embedding. Only the local player wrapper is hosted; no game code, artwork or music is redistributed.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.miniplay.com/game/five-nights-at-freddys-remaster",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/miniplay-five-nights-at-freddys-remaster/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "warnings": [
+      "Jump scares, loud sounds and flashing lights."
+    ],
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
   }
 ]
