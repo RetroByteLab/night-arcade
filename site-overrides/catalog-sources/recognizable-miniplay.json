@@ -1,0 +1,68 @@
+[
+  {
+    "catalogId": "miniplay-friday-night-funkin",
+    "title": "Friday Night Funkin'",
+    "sourceUrl": "https://www.miniplay.com/game/friday-night-funkin",
+    "embedUrl": "https://www.miniplay.com/embed/friday-night-funkin",
+    "localPath": "games/miniplay-friday-night-funkin/index.html",
+    "identity": "Miniplay credits NinjaMuffin99, PhantomArcade3K, Evilsk8r and Kawaisprite. This is the publisher browser edition, not a claim to the latest official build.",
+    "pageSha256": "c669ba076cb876ba9a2b768ea7be9b77d9e44b2e84596b5bccb926139a6b829a",
+    "embedPageSha256": "0813eb1d11da4efb84476776eb8b541093ddede165e7137bd0bb2ba877d7af19",
+    "evidence": "The publisher game page supplies this embed iframe and its player sets allowEmbed=true. Embed-only use; no game asset redistribution rights claimed.",
+    "verification": "untested",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Background popup checks were taken during loading. They are not rendering or gameplay passes."
+    }
+  },
+  {
+    "catalogId": "miniplay-baldis-fun-new-school-remastered",
+    "title": "Baldi's Fun New School Remastered (Fan Game)",
+    "sourceUrl": "https://www.miniplay.com/game/baldis-fun-new-school-remastered",
+    "embedUrl": "https://www.miniplay.com/embed/baldis-fun-new-school-remastered",
+    "localPath": "games/miniplay-baldis-fun-new-school-remastered/index.html",
+    "identity": "A fan-made Baldi game, not mystman12's original Baldi's Basics or Baldi's Basics Plus.",
+    "pageSha256": "90a1062d2060e6cc49d9674dde88fed91e9c4195a1405199e84888e4b9fc1a70",
+    "embedPageSha256": "dd69c9de35fb7e55a7f24185d5db1ba9df8979a05387e29f33ba8d82b0844238",
+    "evidence": "The publisher game page supplies this embed iframe and its player sets allowEmbed=true. Embed-only use; no game asset redistribution rights claimed.",
+    "verification": "untested",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Background popup checks were taken during loading. They are not rendering or gameplay passes."
+    }
+  },
+  {
+    "catalogId": "miniplay-five-nights-at-freddys-remaster",
+    "title": "Five Nights at Freddy's Remaster (Fan Game)",
+    "sourceUrl": "https://www.miniplay.com/game/five-nights-at-freddys-remaster",
+    "embedUrl": "https://www.miniplay.com/embed/five-nights-at-freddys-remaster",
+    "localPath": "games/miniplay-five-nights-at-freddys-remaster/index.html",
+    "identity": "Miniplay credits SimusDev. This is a fan remake, not an original Scott Cawthon FNAF release.",
+    "pageSha256": "b8e3970e9519839f1bb5ce2d9cdec80c4fad17213330504e6d1d194b731b83c6",
+    "embedPageSha256": "33db92fe95e4a10365809666121a008e8b8a2d3b8a927e738fe5ced31a107ca3",
+    "evidence": "The publisher game page supplies this embed iframe and its player sets allowEmbed=true. Embed-only use; no game asset redistribution rights claimed.",
+    "verification": "untested",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Background popup checks were taken during loading. They are not rendering or gameplay passes."
+    }
+  }
+]
