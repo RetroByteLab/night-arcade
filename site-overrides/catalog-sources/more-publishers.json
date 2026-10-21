@@ -1,0 +1,202 @@
+[
+  {
+    "catalogId": "classic-moto-x3m",
+    "title": "Moto X3M",
+    "sourceUrl": "https://www.twoplayergames.org/game/moto-x3m",
+    "embedUrl": "https://www.twoplayergames.org/embed/moto-x3m",
+    "pageSha256": "d4d8a700a8d8a03922b4cd3d1d9c56a0bebd529f81ba6a5d1770e67f99a8512e",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-moto-x3m/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Most background popup frames initially reported zero dimensions; their URL checks are not gameplay or sizing passes."
+    }
+  },
+  {
+    "catalogId": "tpg-fireboy-and-watergirl-in-the-forest-temple",
+    "title": "Fireboy and Watergirl in The Forest Temple",
+    "sourceUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-in-the-forest-temple",
+    "embedUrl": "https://www.twoplayergames.org/embed/fireboy-and-watergirl-in-the-forest-temple",
+    "pageSha256": "6c81171dc949ffbc96c56e50be783bd7a272c0f02872d1ba32e2ae57fd76f896",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-fireboy-and-watergirl-in-the-forest-temple/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Most background popup frames initially reported zero dimensions; their URL checks are not gameplay or sizing passes."
+    }
+  },
+  {
+    "catalogId": "tpg-fireboy-and-watergirl-2-in-the-light-temple",
+    "title": "Fireboy and Watergirl 2 in The Light Temple",
+    "sourceUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-2-in-the-light-temple",
+    "embedUrl": "https://www.twoplayergames.org/embed/fireboy-and-watergirl-2-in-the-light-temple",
+    "pageSha256": "a0b669f70c6a6b3654f5c1197fb75e209a1ec1b2c12f9d42a7087fda0ff79618",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-fireboy-and-watergirl-2-in-the-light-temple/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Most background popup frames initially reported zero dimensions; their URL checks are not gameplay or sizing passes."
+    }
+  },
+  {
+    "catalogId": "classic-g-switch-3",
+    "title": "G-Switch 3",
+    "sourceUrl": "https://www.twoplayergames.org/game/g-switch-3",
+    "embedUrl": "https://www.twoplayergames.org/embed/g-switch-3",
+    "pageSha256": "29d2fe5174c912ccbb569d1aa1b65fcca76b9166490510471eab933b5dc67392",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-g-switch-3/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Most background popup frames initially reported zero dimensions; their URL checks are not gameplay or sizing passes."
+    }
+  },
+  {
+    "catalogId": "classic-house-of-hazards",
+    "title": "House of Hazards",
+    "sourceUrl": "https://www.twoplayergames.org/game/house-of-hazards",
+    "embedUrl": "https://www.twoplayergames.org/embed/house-of-hazards",
+    "pageSha256": "777c5f9122a1ff363038216c604d556dd4998bf3134025a39139c521ab1cf1c8",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-house-of-hazards/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Most background popup frames initially reported zero dimensions; their URL checks are not gameplay or sizing passes."
+    }
+  },
+  {
+    "catalogId": "tpg-money-movers",
+    "title": "Money Movers",
+    "sourceUrl": "https://www.twoplayergames.org/game/money-movers",
+    "embedUrl": "https://www.twoplayergames.org/embed/money-movers",
+    "pageSha256": "7787fa4a79c38b57039343906259dc7caf6be128b5a713c02266474404c4258d",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-money-movers/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Most background popup frames initially reported zero dimensions; their URL checks are not gameplay or sizing passes."
+    }
+  },
+  {
+    "catalogId": "tpg-money-movers-2",
+    "title": "Money Movers 2",
+    "sourceUrl": "https://www.twoplayergames.org/game/money-movers-2",
+    "embedUrl": "https://www.twoplayergames.org/embed/money-movers-2",
+    "pageSha256": "7b25cc2605742a700a5375e00ade45b3f7467634d695ccf1fbe08844e840fbe7",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-money-movers-2/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Most background popup frames initially reported zero dimensions; their URL checks are not gameplay or sizing passes."
+    }
+  },
+  {
+    "catalogId": "classic-bad-ice-cream",
+    "title": "Bad Ice-Cream",
+    "sourceUrl": "https://www.twoplayergames.org/game/bad-ice-cream",
+    "embedUrl": "https://www.twoplayergames.org/embed/bad-ice-cream",
+    "pageSha256": "42b266ec0c7c0315a394eeaea83b29431e807c79ba51b001ee2cc946a22338e9",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-bad-ice-cream/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Most background popup frames initially reported zero dimensions; their URL checks are not gameplay or sizing passes."
+    }
+  },
+  {
+    "catalogId": "classic-getaway-shootout",
+    "title": "Getaway Shootout",
+    "sourceUrl": "https://www.twoplayergames.org/game/getaway-shootout",
+    "embedUrl": "https://www.twoplayergames.org/embed/getaway-shootout",
+    "pageSha256": "1f189469a467aec145b3d15f8c4eab5ee4e23b537e7f7199ab69e448e31ee4c9",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-getaway-shootout/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Most background popup frames initially reported zero dimensions; their URL checks are not gameplay or sizing passes."
+    }
+  },
+  {
+    "catalogId": "classic-rooftop-snipers",
+    "title": "Rooftop Snipers",
+    "sourceUrl": "https://www.twoplayergames.org/game/rooftop-snipers",
+    "embedUrl": "https://www.twoplayergames.org/embed/rooftop-snipers",
+    "pageSha256": "deb8d97e07b63bf10a5d2da5f10c0ba242ca02af13ac44226340c399433261bb",
+    "evidence": "Public Embed control plus embedFrame URL in publisher-supplied metadata.",
+    "verification": "untested",
+    "localPath": "games/tpg-rooftop-snipers/index.html",
+    "browserChecks": {
+      "popupOpened": true,
+      "address": "about:blank",
+      "wrapperTitleObserved": true,
+      "publisherFrameAssigned": true,
+      "gameplay": "not verified",
+      "fullscreen": "not verified",
+      "mobile": "not verified",
+      "limitation": "Most background popup frames initially reported zero dimensions; their URL checks are not gameplay or sizing passes."
+    }
+  }
+]
