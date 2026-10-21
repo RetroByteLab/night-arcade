@@ -13055,5 +13055,568 @@
     ],
     "added": "2026-10-20",
     "featured": false
+  },
+  {
+    "id": "tpg-vex-7",
+    "title": "Vex 7",
+    "description": "Navigate elaborate platform courses with new tools.",
+    "categories": [
+      "Platformer",
+      "Adventure"
+    ],
+    "keywords": [
+      "vex 7",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Vex_7.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/vex-7",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/vex-7",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-vex-7/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-fireboy-and-watergirl-3-in-the-ice-temple",
+    "title": "Fireboy and Watergirl 3 in The Ice Temple",
+    "description": "Solve cooperative puzzles across slippery ice-temple rooms.",
+    "categories": [
+      "Puzzle"
+    ],
+    "keywords": [
+      "fireboy and watergirl 3 in the ice temple",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Fireboy-and-Watergirl-3.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-3-in-the-ice-temple",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-3-in-the-ice-temple",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-fireboy-and-watergirl-3-in-the-ice-temple/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-fireboy-and-watergirl-4-the-crystal-temple",
+    "title": "Fireboy and Watergirl 4 The Crystal Temple",
+    "description": "Work together to solve crystal-temple platform puzzles.",
+    "categories": [
+      "Puzzle"
+    ],
+    "keywords": [
+      "fireboy and watergirl 4 the crystal temple",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/fireboy-watergirl-4.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-4-the-crystal-temple",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-4-the-crystal-temple",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-fireboy-and-watergirl-4-the-crystal-temple/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-fireboy-and-watergirl-5-elements",
+    "title": "Fireboy and Watergirl 5: Elements",
+    "description": "Guide the duo through temples with different elemental puzzles.",
+    "categories": [
+      "Puzzle"
+    ],
+    "keywords": [
+      "fireboy and watergirl 5 elements",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Fireboy_Watergirl_5_180x135.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-5-elements",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-5-elements",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-fireboy-and-watergirl-5-elements/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-fireboy-and-watergirl-6-fairy-tales",
+    "title": "Fireboy and Watergirl 6: Fairy Tales",
+    "description": "Help the duo solve puzzles with magical fairy companions.",
+    "categories": [
+      "Puzzle"
+    ],
+    "keywords": [
+      "fireboy and watergirl 6 fairy tales",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Fireboy_and_Watergirl_6.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-6-fairy-tales",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-6-fairy-tales",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-fireboy-and-watergirl-6-fairy-tales/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-gun-mayhem-2-more-mayhem",
+    "title": "Gun Mayhem 2 More Mayhem",
+    "description": "Compete in chaotic cartoon platform arena matches.",
+    "categories": [
+      "Arcade"
+    ],
+    "keywords": [
+      "gun mayhem 2 more mayhem",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/o3/gun-mayhem-2-more-mayhem.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/gun-mayhem-2-more-mayhem",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/gun-mayhem-2-more-mayhem",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-gun-mayhem-2-more-mayhem/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-gun-mayhem-redux",
+    "title": "Gun Mayhem Redux",
+    "description": "Play quick cartoon arena battles with wobbly platform action.",
+    "categories": [
+      "Arcade"
+    ],
+    "keywords": [
+      "gun mayhem redux",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/o4/gun-mayhem-redux.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/gun-mayhem-redux",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/gun-mayhem-redux",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-gun-mayhem-redux/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-tank-trouble",
+    "title": "Tank Trouble",
+    "description": "Navigate maze arenas in compact cartoon tank battles.",
+    "categories": [
+      "Arcade"
+    ],
+    "keywords": [
+      "tank trouble",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/o6/tank-trouble/tank-trouble.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/tank-trouble",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/tank-trouble",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-tank-trouble/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-get-on-top",
+    "title": "Get on Top",
+    "description": "Outbalance an opponent in a two-player physics contest.",
+    "categories": [
+      "Multiplayer"
+    ],
+    "keywords": [
+      "get on top",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/o4/Get_on_Top/get-on-top-v2.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/get-on-top",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/get-on-top",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-get-on-top/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-football-bros",
+    "title": "Football Bros",
+    "description": "Play fast arcade American-football matches.",
+    "categories": [
+      "Sports"
+    ],
+    "keywords": [
+      "football bros",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/football-bros-game.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/football-bros",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/football-bros",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-football-bros/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-soccer-bros",
+    "title": "Soccer Bros",
+    "description": "Compete in quick arcade soccer duels.",
+    "categories": [
+      "Sports"
+    ],
+    "keywords": [
+      "soccer bros",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/soccer-bros.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/soccer-bros",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/soccer-bros",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-soccer-bros/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-soccer-physics",
+    "title": "Soccer Physics",
+    "description": "Play one-button soccer with unpredictable physics.",
+    "categories": [
+      "Sports"
+    ],
+    "keywords": [
+      "soccer physics",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/soccer-physics.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/soccer-physics",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/soccer-physics",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-soccer-physics/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-super-fighters",
+    "title": "Super Fighters",
+    "description": "Play compact cartoon action arenas with local multiplayer.",
+    "categories": [
+      "Arcade"
+    ],
+    "keywords": [
+      "super fighters",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/superfighters.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/super-fighters",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/super-fighters",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-super-fighters/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-stick-badminton",
+    "title": "Stick Badminton",
+    "description": "Play quick badminton matches with stick-figure athletes.",
+    "categories": [
+      "Sports"
+    ],
+    "keywords": [
+      "stick badminton",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/o2/Stick_Badminton.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/stick-badminton",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/stick-badminton",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-stick-badminton/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-g-switch-2",
+    "title": "G-Switch 2",
+    "description": "Switch gravity through fast futuristic running courses.",
+    "categories": [
+      "Platformer",
+      "Adventure"
+    ],
+    "keywords": [
+      "g switch 2",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/o4/G-switch-2.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/g-switch-2",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/g-switch-2",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-g-switch-2/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-football-legends-2021",
+    "title": "Football Legends 2021",
+    "description": "Compete in arcade soccer matches and tournaments.",
+    "categories": [
+      "Sports"
+    ],
+    "keywords": [
+      "football legends 2021",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Football-Legends-2021.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/football-legends-2021",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/football-legends-2021",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-football-legends-2021/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-vex-hyper-dash",
+    "title": "Vex Hyper Dash",
+    "description": "Time jumps and dashes through fast Vex courses.",
+    "categories": [
+      "Platformer",
+      "Adventure"
+    ],
+    "keywords": [
+      "vex hyper dash",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/vex-hyper-dash.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/vex-hyper-dash",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/vex-hyper-dash",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-vex-hyper-dash/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-money-movers-3-guard-duty",
+    "title": "Money Movers 3: Guard Duty",
+    "description": "Coordinate two characters through cooperative platform puzzles.",
+    "categories": [
+      "Puzzle"
+    ],
+    "keywords": [
+      "money movers 3 guard duty",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/o5/Money-Movers_3_Guard_Duty.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/money-movers-3-guard-duty",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/money-movers-3-guard-duty",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-money-movers-3-guard-duty/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-gun-mayhem",
+    "title": "Gun Mayhem",
+    "description": "Play the original cartoon platform arena game.",
+    "categories": [
+      "Arcade"
+    ],
+    "keywords": [
+      "gun mayhem",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/o3/gun-mayhem-v3.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/gun-mayhem",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/gun-mayhem",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-gun-mayhem/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-ping-pong-chaos",
+    "title": "Ping Pong Chaos",
+    "description": "Compete in quick physics-based table-tennis rounds.",
+    "categories": [
+      "Sports"
+    ],
+    "keywords": [
+      "ping pong chaos",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Ping_Pong_Chaos/Ping-Pong-Chaos.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/ping-pong-chaos",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "Listed in the publisher catalog; its game page explicitly supplies an Embed control and embedFrame URL. Only the local player wrapper is hosted. Game assets, advertising and SDK remain unchanged on publisher servers.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/ping-pong-chaos",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-ping-pong-chaos/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opened at about:blank with the expected title and publisher frame URL. Gameplay, full loading, redirects over time, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
   }
 ]
