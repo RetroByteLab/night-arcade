@@ -35,6 +35,7 @@ jobs:
         run: |
           python3 site-overrides/scripts/import-flipline.py
           python3 site-overrides/scripts/import-large-publisher-batch.py --build-only
+          python3 site-overrides/scripts/import-large-publisher-batch.py --popular --build-only
           cp -R site-overrides/games/. _site/games/
           cp -R site-overrides/vendor _site/
           cp site-overrides/REQUESTED-GAMES.md _site/
