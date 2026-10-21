@@ -1079,29 +1079,31 @@
   {
     "id": "classic-moto-x3m",
     "title": "Moto X3M",
-    "description": "Race a stunt bike through obstacle courses and land your flips.",
+    "description": "Race a motorbike through timed obstacle courses and stunt tracks.",
     "categories": [
-      "Racing"
+      "Racing",
+      "Arcade"
     ],
     "keywords": [
       "moto x3m",
-      "Racing"
+      "publisher embed"
     ],
-    "thumbnail": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=204,height=204,fit=cover,f=auto/2c6d5a46cdbceada277c870ce1c389ee/moto-x3m-logo.jpg",
-    "sourceUrl": "https://poki.com/en/g/moto-x3m",
-    "sourceName": "Poki game page",
-    "sourceInfo": "Existing third-party game linked from Poki's public catalog. No game files were copied; no embedding or redistribution permission is claimed.",
-    "license": "External link only",
-    "launchMethod": "external",
-    "compatibility": "external",
-    "compatibilityNote": "Play at the game's listed publisher page. Authorized embedding and about:blank compatibility have not been verified, so Night Arcade does not frame this game.",
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/MotoX3M.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/moto-x3m",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/moto-x3m",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-moto-x3m/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opening, about:blank address and publisher frame URL checked. Gameplay, full loading, mobile and fullscreen have not passed complete testing.",
     "deviceCompatibility": [
       "needs-review"
     ],
-    "added": "2026-10-19",
-    "featured": true,
-    "featuredRank": 5,
-    "playLabel": "Play on Poki"
+    "added": "2026-10-20",
+    "featured": false
   },
   {
     "id": "classic-polytrack",
@@ -2596,29 +2598,32 @@
   {
     "id": "classic-bad-ice-cream",
     "title": "Bad Ice-Cream",
-    "description": "Play Bad Ice-Cream on Poki.",
+    "description": "Collect fruit and build ice walls to navigate colorful mazes.",
     "categories": [
-      "Arcade"
+      "Puzzle",
+      "Arcade",
+      "Multiplayer"
     ],
     "keywords": [
       "bad ice cream",
-      "Arcade"
+      "publisher embed"
     ],
-    "thumbnail": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=94,height=94,fit=cover,f=auto/1cdb5c1a8c09ec5f8052a6c12bf6c79b/bad-ice-cream-logo.png",
-    "sourceUrl": "https://poki.com/en/g/bad-ice-cream",
-    "sourceName": "Poki game page",
-    "sourceInfo": "Existing third-party game linked from Poki's public catalog. No game files were copied; no embedding or redistribution permission is claimed.",
-    "license": "External link only",
-    "launchMethod": "external",
-    "compatibility": "external",
-    "compatibilityNote": "Play at the game's listed publisher page. Authorized embedding and about:blank compatibility have not been verified, so Night Arcade does not frame this game.",
+    "thumbnail": "https://images.twoplayergames.org/files/games/o3/Bad_ice_Cream_180x135.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/bad-ice-cream",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/bad-ice-cream",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-bad-ice-cream/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opening, about:blank address and publisher frame URL checked. Gameplay, full loading, mobile and fullscreen have not passed complete testing.",
     "deviceCompatibility": [
       "needs-review"
     ],
-    "added": "2026-10-19",
-    "featured": false,
-    "featuredRank": 179,
-    "playLabel": "Play on Poki"
+    "added": "2026-10-20",
+    "featured": false
   },
   {
     "id": "classic-super-fowlst-2",
@@ -3236,31 +3241,31 @@
   {
     "id": "classic-rooftop-snipers",
     "title": "Rooftop Snipers",
-    "description": "Play Rooftop Snipers on Poki.",
+    "description": "Two-button cartoon rooftop duels with wobbly physics.",
     "categories": [
-      "Adventure",
+      "Arcade",
       "Multiplayer"
     ],
     "keywords": [
       "rooftop snipers",
-      "Adventure",
-      "Multiplayer"
+      "publisher embed"
     ],
-    "thumbnail": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=94,height=94,fit=cover,f=auto/c127771edb0e821e4109b7058ae3f094/rooftop-snipers-logo.jpeg",
-    "sourceUrl": "https://poki.com/en/g/rooftop-snipers",
-    "sourceName": "Poki game page",
-    "sourceInfo": "Existing third-party game linked from Poki's public catalog. No game files were copied; no embedding or redistribution permission is claimed.",
-    "license": "External link only",
-    "launchMethod": "external",
-    "compatibility": "external",
-    "compatibilityNote": "Play at the game's listed publisher page. Authorized embedding and about:blank compatibility have not been verified, so Night Arcade does not frame this game.",
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Rooftop_Snipers/rooftop-snipers-v5.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/rooftop-snipers",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/rooftop-snipers",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-rooftop-snipers/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opening, about:blank address and publisher frame URL checked. Gameplay, full loading, mobile and fullscreen have not passed complete testing.",
     "deviceCompatibility": [
       "needs-review"
     ],
-    "added": "2026-10-19",
-    "featured": true,
-    "featuredRank": 17,
-    "playLabel": "Play on Poki"
+    "added": "2026-10-20",
+    "featured": false
   },
   {
     "id": "classic-duo-survival-2",
@@ -4140,31 +4145,32 @@
   {
     "id": "classic-g-switch-3",
     "title": "G-Switch 3",
-    "description": "Play G-Switch 3 on Poki.",
+    "description": "Flip gravity to keep running through futuristic obstacle courses.",
     "categories": [
       "Platformer",
+      "Arcade",
       "Multiplayer"
     ],
     "keywords": [
       "g switch 3",
-      "Platformer",
-      "Multiplayer"
+      "publisher embed"
     ],
-    "thumbnail": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=94,height=94,fit=cover,f=auto/7f53593c-4090-4cc5-a934-6a5e599d8eaa/g-switch-3-logo.png",
-    "sourceUrl": "https://poki.com/en/g/g-switch-3",
-    "sourceName": "Poki game page",
-    "sourceInfo": "Existing third-party game linked from Poki's public catalog. No game files were copied; no embedding or redistribution permission is claimed.",
-    "license": "External link only",
-    "launchMethod": "external",
-    "compatibility": "external",
-    "compatibilityNote": "Play at the game's listed publisher page. Authorized embedding and about:blank compatibility have not been verified, so Night Arcade does not frame this game.",
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/G-Switch_3/g-switch-3-v4.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/g-switch-3",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/g-switch-3",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-g-switch-3/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opening, about:blank address and publisher frame URL checked. Gameplay, full loading, mobile and fullscreen have not passed complete testing.",
     "deviceCompatibility": [
       "needs-review"
     ],
-    "added": "2026-10-19",
-    "featured": false,
-    "featuredRank": 35,
-    "playLabel": "Play on Poki"
+    "added": "2026-10-20",
+    "featured": false
   },
   {
     "id": "classic-nitrome-must-die",
@@ -4576,29 +4582,31 @@
   {
     "id": "classic-house-of-hazards",
     "title": "House of Hazards",
-    "description": "Compete with friends while everyday household tasks turn into obstacles.",
+    "description": "Complete household tasks while dodging slapstick obstacles.",
     "categories": [
+      "Arcade",
       "Multiplayer"
     ],
     "keywords": [
       "house of hazards",
-      "Multiplayer"
+      "publisher embed"
     ],
-    "thumbnail": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=94,height=94,fit=cover,f=auto/0609b0ba2889859b21cf47ca205818fe/house-of-hazards-logo.png",
-    "sourceUrl": "https://poki.com/en/g/house-of-hazards",
-    "sourceName": "Poki game page",
-    "sourceInfo": "Existing third-party game linked from Poki's public catalog. No game files were copied; no embedding or redistribution permission is claimed.",
-    "license": "External link only",
-    "launchMethod": "external",
-    "compatibility": "external",
-    "compatibilityNote": "Play at the game's listed publisher page. Authorized embedding and about:blank compatibility have not been verified, so Night Arcade does not frame this game.",
+    "thumbnail": "https://images.twoplayergames.org/files/games/o1/House_of_Hazards/house-of-hazards.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/house-of-hazards",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/house-of-hazards",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-house-of-hazards/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opening, about:blank address and publisher frame URL checked. Gameplay, full loading, mobile and fullscreen have not passed complete testing.",
     "deviceCompatibility": [
       "needs-review"
     ],
-    "added": "2026-10-19",
-    "featured": true,
-    "featuredRank": 12,
-    "playLabel": "Play on Poki"
+    "added": "2026-10-20",
+    "featured": false
   },
   {
     "id": "classic-fish-eat-fish",
@@ -4711,29 +4719,31 @@
   {
     "id": "classic-getaway-shootout",
     "title": "Getaway Shootout",
-    "description": "Race for the getaway with awkward jumps and local multiplayer controls.",
+    "description": "Hop through chaotic cartoon races to reach the getaway first.",
     "categories": [
+      "Arcade",
       "Multiplayer"
     ],
     "keywords": [
       "getaway shootout",
-      "Multiplayer"
+      "publisher embed"
     ],
-    "thumbnail": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=94,height=94,fit=cover,f=auto/7e6806e76a4f8ad5b7a8ab8d1d42a74b/getaway-shootout-logo.png",
-    "sourceUrl": "https://poki.com/en/g/getaway-shootout",
-    "sourceName": "Poki game page",
-    "sourceInfo": "Existing third-party game linked from Poki's public catalog. No game files were copied; no embedding or redistribution permission is claimed.",
-    "license": "External link only",
-    "launchMethod": "external",
-    "compatibility": "external",
-    "compatibilityNote": "Play at the game's listed publisher page. Authorized embedding and about:blank compatibility have not been verified, so Night Arcade does not frame this game.",
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Getaway_Shootout/getaway-shootout-v2.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/getaway-shootout",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/getaway-shootout",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-getaway-shootout/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opening, about:blank address and publisher frame URL checked. Gameplay, full loading, mobile and fullscreen have not passed complete testing.",
     "deviceCompatibility": [
       "needs-review"
     ],
-    "added": "2026-10-19",
-    "featured": true,
-    "featuredRank": 16,
-    "playLabel": "Play on Poki"
+    "added": "2026-10-20",
+    "featured": false
   },
   {
     "id": "classic-ducklings-io",
@@ -11809,6 +11819,126 @@
     "compatibility": "untested",
     "status": "Not tested",
     "compatibilityNote": "Popup opening and about:blank address checked in browser. Full gameplay and fullscreen compatibility have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-fireboy-and-watergirl-in-the-forest-temple",
+    "title": "Fireboy and Watergirl in The Forest Temple",
+    "description": "Guide Fireboy and Watergirl through cooperative temple puzzles.",
+    "categories": [
+      "Puzzle",
+      "Platformer",
+      "Multiplayer"
+    ],
+    "keywords": [
+      "fireboy and watergirl in the forest temple",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/fireboy-watergirl-1.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-in-the-forest-temple",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-in-the-forest-temple",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-fireboy-and-watergirl-in-the-forest-temple/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opening, about:blank address and publisher frame URL checked. Gameplay, full loading, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-fireboy-and-watergirl-2-in-the-light-temple",
+    "title": "Fireboy and Watergirl 2 in The Light Temple",
+    "description": "Solve light and mirror puzzles with two complementary characters.",
+    "categories": [
+      "Puzzle",
+      "Platformer",
+      "Multiplayer"
+    ],
+    "keywords": [
+      "fireboy and watergirl 2 in the light temple",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/other/Fireboy-and-Watergirl-2.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-2-in-the-light-temple",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/fireboy-and-watergirl-2-in-the-light-temple",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-fireboy-and-watergirl-2-in-the-light-temple/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opening, about:blank address and publisher frame URL checked. Gameplay, full loading, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-money-movers",
+    "title": "Money Movers",
+    "description": "Coordinate two brothers to solve switches, platforms and escape puzzles.",
+    "categories": [
+      "Puzzle",
+      "Platformer",
+      "Multiplayer"
+    ],
+    "keywords": [
+      "money movers",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/o4/Money_Movers_180x135.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/money-movers",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/money-movers",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-money-movers/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opening, about:blank address and publisher frame URL checked. Gameplay, full loading, mobile and fullscreen have not passed complete testing.",
+    "deviceCompatibility": [
+      "needs-review"
+    ],
+    "added": "2026-10-20",
+    "featured": false
+  },
+  {
+    "id": "tpg-money-movers-2",
+    "title": "Money Movers 2",
+    "description": "Team up for another set of cooperative platform puzzles.",
+    "categories": [
+      "Puzzle",
+      "Platformer",
+      "Multiplayer"
+    ],
+    "keywords": [
+      "money movers 2",
+      "publisher embed"
+    ],
+    "thumbnail": "https://images.twoplayergames.org/files/games/o4/Money_Movers_2_180x135.jpg",
+    "sourceUrl": "https://www.twoplayergames.org/game/money-movers-2",
+    "sourceName": "TwoPlayerGames publisher embed",
+    "sourceInfo": "The publisher page exposes an Embed control and a public embedFrame. Game files remain publisher-hosted; no assets are copied.",
+    "license": "Publisher-provided embed HTML",
+    "licenseUrl": "https://www.twoplayergames.org/game/money-movers-2",
+    "launchMethod": "about-blank-html",
+    "localPath": "games/tpg-money-movers-2/index.html",
+    "compatibility": "untested",
+    "status": "Not tested",
+    "compatibilityNote": "Real popup opening, about:blank address and publisher frame URL checked. Gameplay, full loading, mobile and fullscreen have not passed complete testing.",
     "deviceCompatibility": [
       "needs-review"
     ],
