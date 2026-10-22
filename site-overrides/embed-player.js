@@ -1,7 +1,8 @@
 (() => {
   const frame = document.getElementById('game');
   if (!frame || window.nightArcadeSized) return;
-  const source = new URL(frame.src);
+  let source;
+  try { source = new URL(frame.src); } catch { return; }
   if (!['y8.com', 'www.y8.com'].includes(source.hostname)) return;
   window.nightArcadeSized = true;
   const assetBase = document.currentScript.src;
@@ -26,13 +27,21 @@
     frame.style.setProperty('left', `${(bounds.width - size.width * scale) / 2}px`, 'important');
     frame.style.setProperty('top', `${(bounds.height - size.height * scale) / 2}px`, 'important');
   }
-  new ResizeObserver(fit).observe(stage);
+  if (typeof ResizeObserver !== 'undefined') new ResizeObserver(fit).observe(stage);
+  window.addEventListener?.('resize', fit);
   document.addEventListener('fullscreenchange', fit);
   // Fullscreen the fitted stage, not the publisher's fixed-size iframe.
   document.addEventListener('click', async event => {
     if (!event.target.closest('#fullscreen')) return;
     event.preventDefault();
     event.stopImmediatePropagation();
+    if (window.NightArcadePlayer) {
+      await window.NightArcadePlayer.requestFullscreen(stage, message => {
+        const status = document.getElementById('status');
+        if (status) { status.textContent = message; status.title = message; }
+      });
+      return;
+    }
     try { await stage.requestFullscreen(); }
     catch { document.getElementById('status').textContent = 'Fullscreen unavailable'; }
   }, true);
