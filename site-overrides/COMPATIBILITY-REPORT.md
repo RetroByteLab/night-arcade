@@ -23,11 +23,12 @@ Blocked or denied popups now expose explicit Play here and ordinary player-page 
 - Added safe handling of sandbox exceptions, fetch timeouts, failed thumbnails, stale inline callbacks and unavailable fullscreen APIs.
 - Normalized player stage/header layout and kept fixed-size publisher scaling centered through resize/fullscreen.
 - Added a static local dependency audit to gate publication on missing critical assets.
+- The deployment audit caught missing shared CSS, audio, input, UI and favicon files for Labyrinth, Snake, Memory and Whac-a-Mole. Restored these existing local dependencies to the publication inputs.
 - Preserved search, favorites, sorting, categories and recent history. No games were removed or relabeled as confirmed playable.
 
 ## Verification and limits
 
-31 automated tests pass. They cover launcher behavior, one-attempt popup recovery, invalid HTML, timeout errors, fullscreen permission denial/rejection and WebKit APIs, player state distinctions, catalog preservation and Cimulity paths. Reapplying the repair script makes zero further changes.
+31 automated tests pass. They cover launcher behavior, one-attempt popup recovery, invalid HTML, timeout errors, fullscreen permission denial/rejection and WebKit APIs, player state distinctions, catalog preservation and Cimulity paths. Reapplying the repair script makes zero further changes. A fresh Backrooms popup check confirmed the actual about:blank address, publisher frame assignment and nonzero frame bounds; its status correctly remained gameplay unverified.
 
 The static audit covers all 405 catalog entries and reports no detected missing local dependencies. It follows local HTML references, CSS URLs and literal relative JavaScript imports. It does not prove dynamically computed URLs, SWF/WASM internals, third-party services or gameplay work.
 
