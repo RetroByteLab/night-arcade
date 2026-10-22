@@ -9,6 +9,12 @@ let activeDevice = '';
 let sortMode = 'az';
 let searchTerm = '';
 let toastTimer;
+let pendingLaunchGame;
+let launchFocus;
+let inlineTimer;
+let inlineSession = 0;
+let gameHealth = {};
+const launchStates = new Map();
 
 const $ = (selector) => document.querySelector(selector);
 const esc = (value = '') => String(value).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -60,7 +66,9 @@ function gameCard(game, index) {
   const external = !hasBlankLaunch(game);
   const unavailable = external && game.id === 'snow-rider-3d';
   const publisher = game.launchMethod === 'about-blank-embed';
-  const cardStatus = unavailable ? 'Awaiting authorized HTML' : game.compatibility === 'supported' ? 'About:blank supported' : game.compatibility === 'untested' ? 'Jump in' : 'External website required';
+  const health = gameHealth[game.id];
+  const verifiedPlayable = game.verification && typeof game.verification === 'object' && game.verification.playable === true;
+  const cardStatus = unavailable ? 'Awaiting authorized HTML' : external ? 'External website required' : health?.state === 'failed' ? 'Failed asset check' : verifiedPlayable ? 'Confirmed playable' : launchStates.get(game.id) === 'loaded' ? 'Player HTML loaded' : game.compatibility === 'supported' ? 'Previously checked' : 'Untested';
   const description = game.description === 'Publisher-provided HTML game embed.' ? '' : game.description;
   const buttonText = playButtonText(game);
   const thumbnail = game.thumbnail ? safeHttpUrl(new URL(game.thumbnail, document.baseURI).href) : '';
@@ -106,6 +114,11 @@ function renderGrid() {
   if (activeView === 'all' && !activeCategory && !activeDevice) $('#library-title').firstChild.textContent = 'Source catalog ';
   document.querySelectorAll('[data-favorite]').forEach((button) => button.addEventListener('click', () => toggleFavorite(button.dataset.favorite)));
   document.querySelectorAll('[data-play]').forEach((button) => button.addEventListener('click', () => launchGame(button.dataset.play)));
+  document.querySelectorAll('.card-art img').forEach((img) => {
+    const fallback = () => { img.hidden = true; img.parentElement.classList.add('image-unavailable'); };
+    img.addEventListener('error', fallback, {once: true});
+    if (img.complete && img.naturalWidth === 0) fallback();
+  });
 }
 
 function toggleFavorite(id) {
@@ -121,6 +134,42 @@ function recordPlay(id) {
   try { localStorage.setItem(STORE.recent, JSON.stringify(recent.slice(0, 30))); } catch { /* Recent play is a convenience, not a launch dependency. */ }
 }
 
+function showLaunchOptions(game, message = 'The browser did not allow the new player tab. Choose an ordinary player option instead.') {
+  const localPath = typeof game.localPath === 'string' && /^games\/[a-z0-9-]+\/index\.html$/.test(game.localPath) ? game.localPath : '';
+  const direct = localPath ? new URL(localPath, document.baseURI).href : safeHttpUrl(game.sourceUrl);
+  pendingLaunchGame = game;
+  launchFocus = document.activeElement;
+  $('#launch-options-title').textContent = game.title;
+  $('#launch-options-message').textContent = message;
+  $('#launch-inline').hidden = !localPath;
+  $('#launch-direct').hidden = !direct;
+  if (direct) $('#launch-direct').href = direct;
+  $('#launch-direct').textContent = localPath ? 'Open player page' : 'Open source page';
+  $('#launch-options').hidden = false;
+  (localPath ? $('#launch-inline') : direct ? $('#launch-direct') : $('#launch-cancel')).focus();
+}
+
+function closeLaunchOptions() {
+  $('#launch-options').hidden = true;
+  pendingLaunchGame = null;
+  if (launchFocus?.isConnected) launchFocus.focus();
+}
+
+async function fetchPlayerHtml(url) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 20000);
+  try {
+    const response = await fetch(url, {cache: 'no-store', signal: controller.signal});
+    if (!response.ok) throw new Error(`HTML request failed (${response.status})`);
+    const html = await response.text();
+    if (!/<html[\s>!]|<!doctype html/i.test(html)) throw new Error('The player URL did not return an HTML document.');
+    return html;
+  } catch (error) {
+    if (error.name === 'AbortError') throw new Error('The player request timed out. Check your connection or ask your administrator about blocked resources.');
+    throw error;
+  } finally { clearTimeout(timer); }
+}
+
 function openInlineLauncher(game) {
   const localPath = typeof game.localPath === 'string' && /^games\/[a-z0-9-]+\/index\.html$/.test(game.localPath) ? game.localPath : '';
   if (!localPath) { showToast('This game does not have a safe local launch path.'); return false; }
@@ -128,18 +177,33 @@ function openInlineLauncher(game) {
   const frame = $('#inline-frame');
   $('#inline-game-title').textContent = game.title;
   frame.title = game.title;
-  $('#inline-status').textContent = 'Pop-up blocked; playing here';
+  $('#inline-status').textContent = 'Loading player; gameplay unverified';
   $('#inline-loading').hidden = false;
   panel.hidden = false;
+  const session = ++inlineSession;
+  clearTimeout(inlineTimer);
   frame.onload = () => {
+    if (session !== inlineSession) return;
+    clearTimeout(inlineTimer);
     $('#inline-loading').hidden = true;
-    $('#inline-status').textContent = 'Game ready';
+    $('#inline-status').textContent = 'Player frame loaded; gameplay unverified';
     try {
       const player = frame.contentDocument.createElement('script');
-      player.src = new URL('embed-player.js?v=20261020-3', document.baseURI).href;
+      player.src = new URL('embed-player.js?v=20261021-1', document.baseURI).href;
       frame.contentDocument.head.append(player);
     } catch { /* Only our same-origin wrappers can be sized here. */ }
   };
+  frame.onerror = () => {
+    if (session !== inlineSession) return;
+    clearTimeout(inlineTimer);
+    $('#inline-loading').hidden = true;
+    $('#inline-status').textContent = 'Player failed to load. Its resources may be unavailable or restricted.';
+  };
+  inlineTimer = setTimeout(() => {
+    if (session !== inlineSession) return;
+    $('#inline-loading').hidden = true;
+    $('#inline-status').textContent = 'Still loading. Browser policy or an unavailable publisher may prevent this game from starting.';
+  }, 25000);
   frame.src = new URL(localPath, document.baseURI).href;
   $('#inline-return').focus();
   return true;
@@ -155,24 +219,34 @@ function applyFullscreenStyles(doc) {
 }
 
 function writeBlankDocument(popup, html) {
+  html = html.replace(/status.textContent='Game ready'/g, "status.textContent='Player frame loaded; gameplay unverified'");
+  if (!html.includes('player-runtime.js')) {
+    const runtime = new URL('player-runtime.js?v=20261021-1', document.baseURI).href;
+    html = html.replace('</head>', `<script defer src="${runtime}"></script></head>`);
+  }
   // Run document.open in the popup's realm so it retains its about:blank URL.
   const script = popup.document.createElement('script');
   script.textContent = `document.open();document.write(${JSON.stringify(html)});document.close();`;
   popup.document.body.append(script);
 }
 
+function openBlankPopup() {
+  try {
+    const popup = window.open('about:blank', '_blank');
+    return popup && !popup.closed ? popup : null;
+  } catch { return null; }
+}
+
 async function openHtmlBlank(game) {
   const localPath = typeof game.localPath === 'string' && /^games\/[a-z0-9-]+\/index\.html$/.test(game.localPath) ? game.localPath : '';
   if (!localPath) { showToast('No local HTML file is available for this game.'); return false; }
-  const popup = window.open('about:blank', '_blank');
-  if (!popup || popup.closed) { showToast('The blank tab was blocked by the browser.'); return false; }
+  const popup = openBlankPopup();
+  if (!popup || popup.closed) { showLaunchOptions(game); return false; }
   try {
     popup.document.body.style.cssText = 'background:#090c14;color:white;font:16px Arial;padding:24px';
     popup.document.body.textContent = 'Loading game HTML...';
     const url = new URL(localPath, document.baseURI);
-    const response = await fetch(url, {cache:'no-store'});
-    if (!response.ok) throw new Error(`HTML request failed (${response.status})`);
-    const html = await response.text();
+    const html = await fetchPlayerHtml(url);
     if (popup.closed) return false;
     const parsed = new DOMParser().parseFromString(html, 'text/html');
     parsed.querySelectorAll('base').forEach((node) => node.remove());
@@ -182,15 +256,20 @@ async function openHtmlBlank(game) {
     applyFullscreenStyles(parsed);
     const player = parsed.createElement('script');
     player.defer = true;
-    player.src = new URL('embed-player.js?v=20261020-3', document.baseURI).href;
+    player.src = new URL('embed-player.js?v=20261021-1', document.baseURI).href;
     parsed.head.append(player);
+    parsed.querySelectorAll('[data-night-arcade-runtime],[data-night-arcade-sizing]').forEach(node => node.remove());
+    const runtime = parsed.createElement('script');
+    runtime.defer = true;
+    runtime.src = new URL('player-runtime.js?v=20261021-1', document.baseURI).href;
+    parsed.head.append(runtime);
     writeBlankDocument(popup, '<!doctype html>' + parsed.documentElement.outerHTML);
     popup.opener = null;
     try { popup.focus(); } catch { /* Focusing is not a launch requirement. */ }
     return true;
   } catch (error) {
     try { popup.document.body.textContent = `Could not load the game HTML: ${error.message}`; } catch { /* The browser may have closed the tab. */ }
-    showToast('The local HTML game could not be loaded.');
+    showLaunchOptions(game, `The player HTML could not load: ${error.message}`);
     return false;
   }
 }
@@ -201,7 +280,7 @@ function openPublisherBlank(game) {
     playUrl = new URL(game.embedUrl);
     if (playUrl.protocol !== 'https:' || playUrl.hostname !== 'html5.gamemonetize.co' || playUrl.username || playUrl.password) throw new Error('Invalid publisher URL');
   } catch { showToast('This game does not have an approved publisher URL.'); return false; }
-  const popup = window.open('about:blank', '_blank');
+  const popup = openBlankPopup();
   if (!popup || popup.closed) return false;
   try {
     const doc = popup.document;
@@ -239,7 +318,7 @@ function openAboutBlank(game) {
   if (game.launchMethod === 'about-blank-embed') return openPublisherBlank(game);
   const localPath = typeof game.localPath === 'string' && /^games\/[a-z0-9-]+\/index\.html$/.test(game.localPath) ? game.localPath : '';
   if (!localPath) { showToast('This game does not have a safe local launch path.'); return false; }
-  const popup = window.open('about:blank', '_blank');
+  const popup = openBlankPopup();
   if (!popup || popup.closed) return false;
   const playUrl = new URL(localPath, document.baseURI).href;
   const label = esc(game.title);
@@ -278,19 +357,20 @@ function launchGame(id) {
   if (game.id === 'snow-rider-3d' && !hasBlankLaunch(game)) { showToast('Snow Rider needs an authorized HTML version before it can launch here.'); return; }
   const source = safeHttpUrl(game.sourceUrl);
   if (game.launchMethod === 'about-blank-html') {
-    openHtmlBlank(game).then((opened) => { if (opened) { recordPlay(id); renderGrid(); } });
+    openHtmlBlank(game).then((opened) => { if (opened) { launchStates.set(id, 'loaded'); recordPlay(id); renderGrid(); } });
     return;
   }
   if (game.compatibility === 'incompatible') { openCompatibilityNotice(game); return; }
   if (hasBlankLaunch(game)) {
     if (openAboutBlank(game)) { recordPlay(id); renderGrid(); }
-    else showToast('The new tab was blocked. Allow pop-ups, then retry the about:blank launch.');
+    else showLaunchOptions(game);
     return;
   }
   if (!source) { showToast('No valid source URL is available for this game.'); return; }
-  const popup = window.open(source, '_blank');
+  let popup;
+  try { popup = window.open(source, '_blank'); } catch { popup = null; }
   if (popup && !popup.closed) { try { popup.opener = null; } catch { /* Cross-browser safety best effort. */ } recordPlay(id); renderGrid(); }
-  else showToast('The new tab was blocked. Allow pop-ups, then retry the official game link.');
+  else showLaunchOptions(game, 'The browser did not allow the new tab. You can choose the ordinary source link if your administrator permits it.');
 }
 
 function scrollToLibrary() { $('#library').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
@@ -302,8 +382,25 @@ function bindUi() {
   $('#sort-select').value = sortMode;
   $('#sort-select').addEventListener('change', (event) => { sortMode = event.target.value; renderGrid(); });
   $('#clear-history').addEventListener('click', () => { try { localStorage.removeItem(STORE.recent); } catch { showToast('This browser does not allow clearing local history.'); return; } renderGrid(); showToast('Recently played history cleared'); });
-  $('#inline-return').addEventListener('click', () => { $('#inline-frame').src = 'about:blank'; $('#inline-launcher').hidden = true; });
-  $('#inline-fullscreen').addEventListener('click', async () => { try { await $('#inline-frame').requestFullscreen(); } catch { $('#inline-status').textContent = 'Fullscreen unavailable in this browser'; } });
+  $('#inline-status').setAttribute('role', 'status');
+  $('#inline-return').addEventListener('click', () => { inlineSession++; clearTimeout(inlineTimer); $('#inline-frame').onload = null; $('#inline-frame').onerror = null; $('#inline-frame').src = 'about:blank'; $('#inline-launcher').hidden = true; });
+  $('#inline-fullscreen').addEventListener('click', () => window.NightArcadePlayer.requestFullscreen($('#inline-launcher'), message => { $('#inline-status').textContent = message; }));
+  $('#launch-cancel').addEventListener('click', closeLaunchOptions);
+  $('#launch-direct').addEventListener('click', closeLaunchOptions);
+  $('#launch-inline').addEventListener('click', () => {
+    const game = pendingLaunchGame;
+    closeLaunchOptions();
+    if (game && openInlineLauncher(game)) { recordPlay(game.id); renderGrid(); }
+  });
+  document.addEventListener('keydown', event => {
+    if ($('#launch-options').hidden) return;
+    if (event.key === 'Escape') { event.preventDefault(); closeLaunchOptions(); }
+    if (event.key !== 'Tab') return;
+    const controls = [...$('#launch-options').querySelectorAll('button,a[href]')].filter(node => !node.hidden);
+    const first = controls[0], last = controls[controls.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  });
   $('#reset-filters').addEventListener('click', () => { activeCategory = ''; activeDevice = ''; activeView = 'all'; searchTerm = ''; $('#search-input').value = ''; $('#clear-search').hidden = true; renderCategories(); renderGrid(); });
   $('#menu-toggle').addEventListener('click', () => $('#sidebar').classList.toggle('open'));
   document.addEventListener('keydown', (event) => { if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') { event.preventDefault(); $('#search-input').focus(); } if (event.key === 'Escape') $('#sidebar').classList.remove('open'); });
@@ -312,17 +409,26 @@ function bindUi() {
 async function init() {
   bindUi();
   try {
-    const response = await fetch('games.json', { cache: 'no-store' });
-    if (!response.ok) throw new Error(`Could not load catalog (${response.status})`);
-    const data = await response.json();
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 20000);
+    let data;
+    try {
+      const response = await fetch('games.json', { cache: 'no-store', signal: controller.signal });
+      if (!response.ok) throw new Error(`Could not load catalog (${response.status})`);
+      data = await response.json();
+    } finally { clearTimeout(timer); }
     if (!Array.isArray(data)) throw new Error('Game catalog must be a JSON array.');
     const ids = new Set();
     games = data.filter((game) => game && typeof game.id === 'string' && /^[a-z0-9-]+$/.test(game.id) && !ids.has(game.id) && (ids.add(game.id), true) && typeof game.title === 'string' && typeof game.description === 'string' && Array.isArray(game.categories));
     renderCategories(); updateNav(); renderGrid();
+    fetch('game-health.json', {cache: 'no-store'}).then(result => result.ok ? result.json() : {}).then(report => {
+      gameHealth = report.games || {};
+      renderGrid();
+    }).catch(() => { /* Optional audit data must not prevent the library from opening. */ });
   } catch (error) {
     $('#game-grid').hidden = true; $('#empty-state').hidden = false;
     $('#empty-state h3').textContent = 'Could not load the game catalog';
-    $('#empty-state p').textContent = `${error.message} Serve this folder over HTTP and check games.json.`;
+    $('#empty-state p').textContent = error.name === 'AbortError' ? 'The catalog request timed out. Check your connection. On managed devices, ask your administrator to review blocked resources.' : `${error.message} Check the connection and games.json. Managed browser policies may restrict this resource.`;
   }
 }
 init();
