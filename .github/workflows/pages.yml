@@ -30,7 +30,7 @@ jobs:
           unzip -q /tmp/library.zip -d _site
           touch _site/.nojekyll
       - name: Apply reviewed interface updates
-        run: cp site-overrides/app.js site-overrides/styles.css site-overrides/index.html site-overrides/games.json site-overrides/embed-player.js site-overrides/embed-sizes.json _site/
+        run: cp site-overrides/app.js site-overrides/styles.css site-overrides/index.html site-overrides/games.json site-overrides/embed-player.js site-overrides/embed-sizes.json site-overrides/player-runtime.js _site/
       - name: Build authorized Flipline classics
         run: |
           python3 site-overrides/scripts/import-flipline.py
@@ -40,6 +40,11 @@ jobs:
           cp -R site-overrides/vendor _site/
           cp site-overrides/REQUESTED-GAMES.md _site/
           cp site-overrides/catalog-sources/*.json _site/catalog-sources/
+      - name: Repair project paths and audit local dependencies
+        run: |
+          python3 site-overrides/scripts/apply-compatibility-repairs.py --root _site
+          python3 site-overrides/scripts/audit-compatibility.py --root _site
+          cp site-overrides/COMPATIBILITY-REPORT.md _site/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static library
