@@ -1,16 +1,14 @@
 {
   "catalogId": "snow-rider-3d",
-  "sourceUrl": "https://www.miniplay.com/game/snow-rider-3d",
-  "embedUrl": "https://www.miniplay.com/embed/snow-rider-3d",
-  "reviewed": "2026-10-20",
-  "permissionBasis": "The publisher game page explicitly displays Embed Snow Rider 3D and supplies this iframe URL for other websites. Embed only; no permission to redistribute game assets is claimed.",
-  "delivery": "Unchanged publisher embed inside a local HTML wrapper, opened by the existing about:blank launcher. No SDK parameters, referrers or access controls are modified.",
+  "delivery": "Original draft local Unity WebGL build",
+  "sourceUrl": "https://github.com/lcpsgames/snowrider",
+  "commit": "e02aa65c32bce0c35032a2f35ab9d5d70241b55e",
+  "reviewed": "2026-10-28",
   "checks": {
-    "sourceOffersEmbed": true,
-    "embedHttpResponse": 200,
-    "browserGameplay": "not tested: browser connection unavailable",
-    "aboutBlankForThisGame": "not tested",
-    "fullscreen": "not tested",
-    "mobile": "not tested"
+    "runtimeChecksums": "verified",
+    "openingScreen": "verified locally",
+    "gameplay": "not verified",
+    "mobile": "not verified",
+    "fullscreen": "not verified"
   }
 }

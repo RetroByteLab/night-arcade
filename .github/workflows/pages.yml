@@ -40,6 +40,8 @@ jobs:
           cp -R site-overrides/vendor _site/
           cp site-overrides/REQUESTED-GAMES.md _site/
           cp site-overrides/catalog-sources/*.json _site/catalog-sources/
+      - name: Restore original Snow Rider runtime
+        run: python3 site-overrides/scripts/restore-snow-rider.py
       - name: Repair project paths and audit local dependencies
         run: |
           python3 site-overrides/scripts/apply-compatibility-repairs.py --root _site
